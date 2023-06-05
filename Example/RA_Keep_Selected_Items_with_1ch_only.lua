@@ -1,9 +1,8 @@
---[[
--- ReaScript Name: Keep Selected Items with only 1 channel
--- @description Self explanatory
--- @author MrBrock adapted from X-raym with AI. Original script prompted for user imput.
 -- @version 1.0
---]]
+-- @description Keep Selected Items with only 1 channel
+-- @author MrBrock adapted from X-raym with AI. Original script prompted for user imput.
+-- 
+--
 
 function main(output) -- local (i, j, item, take, track)
   
