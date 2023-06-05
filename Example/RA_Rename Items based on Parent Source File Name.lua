@@ -1,8 +1,6 @@
---[[
-@description This script renames the active take of an audio item based on the file name of the source file.
-It works with sections or reversed sources.
-@author Frankfante assembled with original scripts by Thonex, nofish and spk77
-@version 1.0
+-- @version 1.0
+-- @description This script renames the active take of an audio item based on the file name of the source file. It works with sections or reversed sources.
+-- @author Frankfante assembled with original scripts by Thonex, nofish and spk77
 --]]
 
 function RENAME_SELECTED_ITEMS_TO_PARENT_SOURCE ()
