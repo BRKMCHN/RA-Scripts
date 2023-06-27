@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="1f3ec08864422a2f91eff003c7f39907334494ef">
+<index version="1" name="RA-Scripts" commit="7d181fb5f883c2f5d81a1ffc0deb44fb9e539063">
   <category name="RA_Main_Scripts">
     <reapack name="RA-Keep Selected Items with 1ch only.lua" type="script" desc="Keep Selected Items with only 1 channel">
       <version name="1.0" author="MrBrock adapted from X-raym with AI. Original script prompted for user imput." time="2023-06-05T02:46:54Z">
@@ -16,9 +16,9 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Rename%20Items%20based%20on%20Source%20File%20Name.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Unselect Muted Items.lua" type="script" desc="Unselects muted items within already selected items.">
-      <version name="1.0" author="Fante + AI" time="2023-06-27T14:26:38Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/1f3ec08864422a2f91eff003c7f39907334494ef/RA_Main_Scripts/RA-Unselect%20Muted%20Items.lua</source>
+    <reapack name="Unselect Muted Items.lua" type="script" desc="Unselects muted items within already selected items.">
+      <version name="1.0" author="RA - Fante (+AI)" time="2023-06-27T18:10:23Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7d181fb5f883c2f5d81a1ffc0deb44fb9e539063/RA_Main_Scripts/Unselect%20Muted%20Items.lua</source>
       </version>
     </reapack>
   </category>
