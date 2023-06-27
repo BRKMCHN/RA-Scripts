@@ -1,5 +1,5 @@
 -- @version 1.0
--- @author Fante + AI
+-- @author RA - Fante (+AI)
 -- @description Unselects muted items within already selected items.
 
 -- Get the current project
