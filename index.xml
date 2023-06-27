@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="7d181fb5f883c2f5d81a1ffc0deb44fb9e539063">
+<index version="1" name="RA-Scripts" commit="d3460793e59c824c50869430f355d80192e18aaa">
   <category name="RA_Main_Scripts">
     <reapack name="RA-Keep Selected Items with 1ch only.lua" type="script" desc="Keep Selected Items with only 1 channel">
       <version name="1.0" author="MrBrock adapted from X-raym with AI. Original script prompted for user imput." time="2023-06-05T02:46:54Z">
@@ -14,11 +14,6 @@
     <reapack name="RA-Rename Items based on Source File Name.lua" type="script" desc="This script renames the active take of an audio item based on the file name of the source file.">
       <version name="1.0" author="Thonex" time="2023-06-05T02:46:54Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Rename%20Items%20based%20on%20Source%20File%20Name.lua</source>
-      </version>
-    </reapack>
-    <reapack name="Unselect Muted Items.lua" type="script" desc="Unselects muted items within already selected items.">
-      <version name="1.0" author="RA - Fante (+AI)" time="2023-06-27T18:10:23Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7d181fb5f883c2f5d81a1ffc0deb44fb9e539063/RA_Main_Scripts/Unselect%20Muted%20Items.lua</source>
       </version>
     </reapack>
   </category>
