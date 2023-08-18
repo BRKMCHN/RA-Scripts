@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="8dcef1864026e2544476aff8593cc1f5b8718828">
+<index version="1" name="RA-Scripts" commit="9cd02c13fc65191e70c7b8720e6618aca9a6d331">
   <category name="RA_Main_Scripts">
+    <reapack name="Move selected items to first selected track within overlap threshold.lua" type="script" desc="Move selected items to first selected track within overlap threshold.">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 This script will apply to selected items and check against themselves. The first selected track is the destination for the end result. On line 5, in the "check for overlaps" part of the script, the initial value of 0.3 means 300ms. You may change this to your preferred maximum overlap allowed.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="MrBrock adapted with AI." time="2023-08-18T14:23:15Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/9cd02c13fc65191e70c7b8720e6618aca9a6d331/RA_Main_Scripts/Move%20selected%20items%20to%20first%20selected%20track%20within%20overlap%20threshold.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Keep Selected Items with 1ch only.lua" type="script" desc="Keep Selected Items with only 1 channel">
       <version name="1.0" author="MrBrock adapted from X-raym with AI. Original script prompted for user imput." time="2023-06-05T02:46:54Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Keep%20Selected%20Items%20with%201ch%20only.lua</source>
