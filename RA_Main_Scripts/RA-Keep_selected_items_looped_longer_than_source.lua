@@ -1,3 +1,7 @@
+-- @version 1.0
+-- @description This script will check for looped items and keep selected those that go beyond source lenght.
+-- @author MrBrock & AI
+
 -- Start the Undo block
 reaper.Undo_BeginBlock()
 
