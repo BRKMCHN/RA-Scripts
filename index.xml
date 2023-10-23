@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="bd03caad284d16ddfecf813dc80c7c51a8190daa">
+<index version="1" name="RA-Scripts" commit="ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e">
   <category name="RA_Main_Scripts">
+    <reapack name="RA-DOUBLAGE_COUNT_ITEMS_on_selected_track.lua" type="script" desc="Couts the number of items on selected track.">
+      <version name="1.0" author="Amel Desharnais, with AI." time="2023-10-23T14:30:04Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e/RA_Main_Scripts/RA-DOUBLAGE_COUNT_ITEMS_on_selected_track.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-DOUBLAGE_COUNT_ITEMS_on_selected_track_within_time_selection.lua" type="script" desc="Couts the number of items on selected track, within time selection.">
+      <version name="1.0" author="Amel Desharnais, with AI." time="2023-10-23T14:30:04Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e/RA_Main_Scripts/RA-DOUBLAGE_COUNT_ITEMS_on_selected_track_within_time_selection.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-DOUBLAGE_Mute_WAV_track_&amp;_UNMUTE_DUB+EDITED.lua" type="script" desc="MUTE WAV Track and UNMUTE DUB + EDITED">
+      <version name="1.0" author="Amel Desharnais, with AI." time="2023-10-23T14:30:04Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e/RA_Main_Scripts/RA-DOUBLAGE_Mute_WAV_track_&amp;_UNMUTE_DUB+EDITED.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-DOUBLAGE_Unmute_WAV_track_&amp;_MUTE_DUB+EDITED.lua" type="script" desc="Unmute WAV track and MUTE DUB + EDITED">
+      <version name="1.0" author="Amel Desharnais, with AI." time="2023-10-23T14:30:04Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e/RA_Main_Scripts/RA-DOUBLAGE_Unmute_WAV_track_&amp;_MUTE_DUB+EDITED.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Keep Selected Items with 1ch only.lua" type="script" desc="Keep Selected Items with only 1 channel">
       <version name="1.0" author="MrBrock adapted from X-raym with AI. Original script prompted for user imput." time="2023-06-05T02:46:54Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Keep%20Selected%20Items%20with%201ch%20only.lua</source>
