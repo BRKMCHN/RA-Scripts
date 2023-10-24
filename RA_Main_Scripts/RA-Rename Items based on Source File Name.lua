@@ -1,6 +1,6 @@
 -- @version 1.0
 -- @author Thonex
--- @description This script renames the active take of an audio item based on the file name of the source file.
+-- @description RESERVOIR AUDIO / This script renames the active take of an audio item based on the file name of the source file.
 --
 
 function RENAME_SELECTED_ITEMS_TO_SOURCE ()

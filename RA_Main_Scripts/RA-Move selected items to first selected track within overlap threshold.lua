@@ -1,6 +1,6 @@
 -- @version 1.0
--- @description Move selected items to first selected track within overlap threshold.
--- @author MrBrock adapted with AI.
+-- @description MOVE SELECTED ITEMS to FIRST SELECTED TRACK. (Within an overlap threshold)
+-- @author RESERVOIR AUDIO / MrBrock adapted with AI.
 -- @about This script will apply to selected items and check against themselves. The first selected track is the destination for the end result. On line 5, in the "check for overlaps" part of the script, the initial value of 0.3 means 300ms. You may change this to your preferred maximum overlap allowed.
 
 

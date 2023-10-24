@@ -1,8 +1,7 @@
 -- @version 1.0
--- @description Swap the item gain with take gain.
--- @author MrBrock with advAIsor
+-- @description SWAP the ITEM GAIN with TAKE GAIN.
+-- @author RESERVOIR AUDIO / MrBrock with advAIsor
 -- 
---
 
 -- Function to swap item volume and take volume
 function swapItemAndTakeVolume(item)

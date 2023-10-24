@@ -1,6 +1,6 @@
 -- @version 1.0
--- @description This script will check the value for take gain and reduce it by 25%.
--- @author MrBrock & AI
+-- @description REDUCE numerical VALUE of TAKE GAIN 25%. (Partial Un-normalization)
+-- @author RESERVOIR AUDIO / MrBrock & AI
 
 -- Start the Undo block
 reaper.Undo_BeginBlock()

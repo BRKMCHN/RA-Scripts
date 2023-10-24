@@ -1,6 +1,6 @@
 -- @version 1.0
--- @description Couts the number of items on selected track.
--- @author Amel Desharnais, with AI.
+-- @description COUNT the number of ITEMS on SELECTED TRACK.
+-- @author RESERVOIR AUDIO / Amel Desharnais, with AI.
 
 -- Get the selected track
 local selectedTrack = reaper.GetSelectedTrack(0, 0)

@@ -1,6 +1,6 @@
 -- @version 1.0
--- @description Unmute WAV track and MUTE DUB + EDITED
--- @author Amel Desharnais, with AI.
+-- @description UNMUTE WAV track and MUTE DUB + EDITED named tracks.
+-- @author RESERVOIR AUDIO / Amel Desharnais, with AI.
 
 -- Define the track names you want to work with
 local trackToUnmuteName = "WAV"

@@ -1,6 +1,6 @@
 -- @version 1.0
--- @description This script will check for looped items and keep selected those that go beyond source lenght.
--- @author MrBrock & AI
+-- @description KEEP SELECTED ITEMS of clips beyond their source lenght, unselect the rest.
+-- @author RESERVOIR AUDIO / MrBrock & AI
 
 -- Start the Undo block
 reaper.Undo_BeginBlock()

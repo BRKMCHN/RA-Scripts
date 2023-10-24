@@ -1,6 +1,6 @@
 -- @version 1.0
--- @description Unselects muted items within previous selection of items
--- @author Fante + AI
+-- @description UNSELECT MUTED ITEMS among currently selected items.
+-- @author RESERVOIR AUDIO / Fante + AI
 
 -- Get the current project
 local project = reaper.EnumProjects(-1, "")
