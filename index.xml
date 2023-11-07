@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="aefb30aaf62e87c83066412a881aa7a136e0abd1">
+<index version="1" name="RA-Scripts" commit="cf5634409bd49a60a57d5f9a833bf33272d40ec8">
   <category name="RA_Main_Scripts">
+    <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf5634409bd49a60a57d5f9a833bf33272d40ec8/RA_Main_Scripts/RA-Add%20Envelope%20points%20based%20on%20markers%20within%20time%20selection.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-ADD-Take_Marker_CHX_DUB_on_SELECTED_ITEMS.lua" type="script" desc="Add Take Marker named CHX-DUB to SELECTED ITEMS.">
       <version name="1.0" author="RESERVOIR AUDIO / Amel Desharnais, with AI." time="2023-10-24T23:06:37Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/aefb30aaf62e87c83066412a881aa7a136e0abd1/RA_Main_Scripts/RA-ADD-Take_Marker_CHX_DUB_on_SELECTED_ITEMS.lua</source>
@@ -36,6 +41,11 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/bd03caad284d16ddfecf813dc80c7c51a8190daa/RA_Main_Scripts/RA-Keep_selected_items_looped_longer_than_source.lua</source>
       </version>
     </reapack>
+    <reapack name="RA-Markers at item edges without overlap.lua" type="script" desc="Create MARKERS at edges of selected items, skipping item edges that overlap with others.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf5634409bd49a60a57d5f9a833bf33272d40ec8/RA_Main_Scripts/RA-Markers%20at%20item%20edges%20without%20overlap.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Move selected items to first selected track within overlap threshold.lua" type="script" desc="MOVE SELECTED ITEMS to FIRST SELECTED TRACK. (Within an overlap threshold)">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -68,6 +78,11 @@
     <reapack name="RA-Rename Items based on Source File Name.lua" type="script" desc="RESERVOIR AUDIO / This script renames the active take of an audio item based on the file name of the source file.">
       <version name="1.0" author="Thonex" time="2023-06-05T02:46:54Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Rename%20Items%20based%20on%20Source%20File%20Name.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Set selected envelope point to previous point value.lua" type="script" desc="SET selected envelope points to PREVIOUS envelope point value.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf5634409bd49a60a57d5f9a833bf33272d40ec8/RA_Main_Scripts/RA-Set%20selected%20envelope%20point%20to%20previous%20point%20value.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Swap item volume and take volume.lua" type="script" desc="SWAP the ITEM GAIN with TAKE GAIN.">
