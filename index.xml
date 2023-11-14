@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="cf5634409bd49a60a57d5f9a833bf33272d40ec8">
+<index version="1" name="RA-Scripts" commit="362dca78597189db6b30134e466b55426670ca54">
   <category name="RA_Main_Scripts">
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
@@ -83,6 +83,11 @@
     <reapack name="RA-Set selected envelope point to previous point value.lua" type="script" desc="SET selected envelope points to PREVIOUS envelope point value.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf5634409bd49a60a57d5f9a833bf33272d40ec8/RA_Main_Scripts/RA-Set%20selected%20envelope%20point%20to%20previous%20point%20value.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-SET time selection to the selected item without moving edit cursor.lua" type="script" desc="SET time selection to the selected item without moving edit cursor.">
+      <version name="1.0" author="RESERVOIR AUDIO / Fante with AI" time="2023-11-14T17:03:49Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/362dca78597189db6b30134e466b55426670ca54/RA_Main_Scripts/RA-SET%20time%20selection%20to%20the%20selected%20item%20without%20moving%20edit%20cursor.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Swap item volume and take volume.lua" type="script" desc="SWAP the ITEM GAIN with TAKE GAIN.">
