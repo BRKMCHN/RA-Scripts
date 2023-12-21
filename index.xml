@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="babaa9ac05d36157f0fb844cd5a551197fb62553">
+<index version="1" name="RA-Scripts" commit="f40d4762a6bf9047aa407a3f2612af1111d1a477">
   <category name="RA_Main_Scripts">
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
@@ -63,6 +63,11 @@
     <reapack name="RA-Reduce_Take_Gain_by_a_Quarter.lua" type="script" desc="REDUCE numerical VALUE of TAKE GAIN 25%. (Partial Un-normalization)">
       <version name="1.0" author="MrBrock &amp; AI" time="2023-10-14T20:09:23Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/bd03caad284d16ddfecf813dc80c7c51a8190daa/RA_Main_Scripts/RA-Reduce_Take_Gain_by_a_Quarter.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-REMOVE syncronized overlapping ITEMS from SAME SOURCE (keeping the longest one).lua" type="script" desc="REMOVE syncronized overlapping ITEMS from SAME SOURCE (keeping the longest one)">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-12-21T03:09:09Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/f40d4762a6bf9047aa407a3f2612af1111d1a477/RA_Main_Scripts/RA-REMOVE%20syncronized%20overlapping%20ITEMS%20from%20SAME%20SOURCE%20(keeping%20the%20longest%20one).lua</source>
       </version>
     </reapack>
     <reapack name="RA-REMOVE_Take_Marker_CHX_DUB_on_SELECTED_ITEMS.lua" type="script" desc="REMOVES Take Markers named CHX-DUB to SELECTED ITEMS.">
