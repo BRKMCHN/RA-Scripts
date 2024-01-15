@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="63a390e35f505ca60e3c09620866a7d903705be6">
+<index version="1" name="RA-Scripts" commit="588183e7072e29bcce90fcbe45492d286971071d">
   <category name="RA_Main_Scripts">
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
@@ -111,6 +111,21 @@
     <reapack name="RA-Swap item volume and take volume.lua" type="script" desc="SWAP the ITEM GAIN with TAKE GAIN.">
       <version name="1.0" author="MrBrock with advAIsor" time="2023-07-28T02:12:26Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/8dcef1864026e2544476aff8593cc1f5b8718828/RA_Main_Scripts/RA-Swap%20item%20volume%20and%20take%20volume.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Toggle ALL ACTIVE send VOLUME envelopes IN PROJECT.lua" type="script" desc="Toggle ALL ACTIVE send VOLUME envelopes IN PROJECT.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-01-15T19:22:50Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/588183e7072e29bcce90fcbe45492d286971071d/RA_Main_Scripts/RA-Toggle%20ALL%20ACTIVE%20send%20VOLUME%20envelopes%20IN%20PROJECT.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Toggle ALL send VOLUME envelopes IN PROJECT.lua" type="script" desc="Toggle ALL send VOLUME envelopes IN PROJECT.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-01-15T19:22:50Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/588183e7072e29bcce90fcbe45492d286971071d/RA_Main_Scripts/RA-Toggle%20ALL%20send%20VOLUME%20envelopes%20IN%20PROJECT.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Toggle ALL send VOLUME envelopes on SELECTED tracks.lua" type="script" desc="Toggle ALL send VOLUME envelopes on SELECTED tracks.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-01-15T19:22:50Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/588183e7072e29bcce90fcbe45492d286971071d/RA_Main_Scripts/RA-Toggle%20ALL%20send%20VOLUME%20envelopes%20on%20SELECTED%20tracks.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Unselect_Muted_Items.lua" type="script" desc="UNSELECT MUTED ITEMS among currently selected items.">
