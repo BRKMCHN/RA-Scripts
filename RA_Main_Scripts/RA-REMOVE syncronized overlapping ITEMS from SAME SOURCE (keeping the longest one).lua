@@ -1,5 +1,5 @@
--- @version 1.0
--- @description REMOVE syncronized overlapping ITEMS from SAME SOURCE (keeping the longest one)
+-- @version 1.1
+-- @description REMOVE syncronized overlapping ITEMS from SAME SOURCE (keeping the longest unmuted item)
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
 -- Current tolerance threshold for syncronicity check = 1/4 frame AND current overlap check threshold is 80% lenght of smallest item in pair compaired.
 
@@ -19,7 +19,8 @@ local function getItemDetails(item)
     local take = reaper.GetActiveTake(item)
     local sourceStart = take and reaper.GetMediaItemTakeInfo_Value(take, "D_STARTOFFS")
     local sourceName = take and reaper.GetMediaItemTake_Source(take) and reaper.GetMediaSourceFileName(reaper.GetMediaItemTake_Source(take), "")
-    return { item = item, position = position, length = length, trackNumber = trackNumber, sourceStart = sourceStart, sourceName = sourceName }
+    local isMuted = reaper.GetMediaItemInfo_Value(item, "B_MUTE") == 1
+    return { item = item, position = position, length = length, trackNumber = trackNumber, sourceStart = sourceStart, sourceName = sourceName, isMuted = isMuted }
 end
 
 -- Function to check overlap between two items
@@ -50,16 +51,24 @@ for i = 1, #items do
         if itemsOverlapSignificantly(items[i], items[j]) and items[i].sourceName == items[j].sourceName then
             local timeDiff = math.abs((items[i].position - items[i].sourceStart) - (items[j].position - items[j].sourceStart))
             if timeDiff <= quarterFrameTime then
-                -- Determine the item to keep and add the other to itemsToDelete
-                if items[i].length > items[j].length or (items[i].length == items[j].length and items[i].trackNumber < items[j].trackNumber) then
-                    table.insert(itemsToDelete, items[j].item)
+                -- Determine the item to keep based on mute status first, then length
+                local keepItemI
+                if items[i].isMuted and not items[j].isMuted then
+                    keepItemI = false
+                elseif not items[i].isMuted and items[j].isMuted then
+                    keepItemI = true
                 else
-                    table.insert(itemsToDelete, items[i].item)
+                    -- Both items have the same mute status; keep the longest one
+                    keepItemI = items[i].length >= items[j].length
                 end
+        
+                -- Add the item not kept to itemsToDelete
+                table.insert(itemsToDelete, keepItemI and items[j].item or items[i].item)
             end
         end
     end
 end
+
 
 -- Delete all items in the itemsToDelete table
 for _, item in ipairs(itemsToDelete) do
@@ -74,4 +83,3 @@ end
 -- Refresh UI and end undo block
 reaper.UpdateArrange()
 reaper.Undo_EndBlock("Delete Overlapping Items from Same Source Keeping the Longest One", -1)
-
