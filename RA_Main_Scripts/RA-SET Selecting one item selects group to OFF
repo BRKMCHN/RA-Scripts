@@ -1,5 +1,5 @@
 -- @version 1.0
--- @description SET the vertical overlap offset visibility to OFF
+-- @description SET Selecting one item selects group to OFF
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
 
 -- Disable offsetting overlapping media items vertically in REAPER if it's currently enabled
