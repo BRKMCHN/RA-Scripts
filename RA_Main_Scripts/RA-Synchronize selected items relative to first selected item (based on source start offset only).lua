@@ -1,5 +1,5 @@
 -- @version 1.0
--- @description Syncronize selected items relative to first selected item based on source offset only.
+-- @description Synchronize selected items relative to first selected item (based on source start offset only)(NOT BWF)
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
 
 reaper.Undo_BeginBlock()
@@ -15,7 +15,6 @@ local function getItemProperties(item)
     local sourceLength = reaper.GetMediaSourceLength(source)
     local itemStart = reaper.GetMediaItemInfo_Value(item, "D_POSITION")
     local startInSource = reaper.GetMediaItemTakeInfo_Value(take, "D_STARTOFFS")
-    local totalSourceLength = sourceLength - startInSource
 
     return itemStart, startInSource, totalSourceLength
 end
@@ -38,4 +37,4 @@ end
 
 reaper.PreventUIRefresh(-1)
 reaper.UpdateArrange()
-reaper.Undo_EndBlock("Sync Items Based on Theoretical Start", -1)
+reaper.Undo_EndBlock("Synchronize selected items relative to first selected item (based on source start offset only)", -1)
