@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="d1ed4194fe2fb0d2290f771eaf796b55c11085d6">
+<index version="1" name="RA-Scripts" commit="7baa282d4e30f0fab6f0adf8c2a7ac9848217556">
   <category name="RA_Main_Scripts">
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
@@ -109,14 +109,29 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf5634409bd49a60a57d5f9a833bf33272d40ec8/RA_Main_Scripts/RA-Set%20selected%20envelope%20point%20to%20previous%20point%20value.lua</source>
       </version>
     </reapack>
+    <reapack name="RA-Set Selection of all group items to OFF.lua" type="script" desc="Set linked selection of all group items to OFF">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-02-28T21:51:48Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7baa282d4e30f0fab6f0adf8c2a7ac9848217556/RA_Main_Scripts/RA-Set%20Selection%20of%20all%20group%20items%20to%20OFF.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-SET time selection to the selected item without moving edit cursor.lua" type="script" desc="SET time selection to the selected item without moving edit cursor.">
       <version name="1.0" author="RESERVOIR AUDIO / Fante with AI" time="2023-11-14T17:03:49Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/362dca78597189db6b30134e466b55426670ca54/RA_Main_Scripts/RA-SET%20time%20selection%20to%20the%20selected%20item%20without%20moving%20edit%20cursor.lua</source>
       </version>
     </reapack>
+    <reapack name="RA-Set Vertical lane spacing of overlapping items to OFF.lua" type="script" desc="Set Vertical lane spacing of overlapping items to OFF">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-02-28T21:51:48Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7baa282d4e30f0fab6f0adf8c2a7ac9848217556/RA_Main_Scripts/RA-Set%20Vertical%20lane%20spacing%20of%20overlapping%20items%20to%20OFF.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Swap item volume and take volume.lua" type="script" desc="SWAP the ITEM GAIN with TAKE GAIN.">
       <version name="1.0" author="MrBrock with advAIsor" time="2023-07-28T02:12:26Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/8dcef1864026e2544476aff8593cc1f5b8718828/RA_Main_Scripts/RA-Swap%20item%20volume%20and%20take%20volume.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Synchronize selected items relative to first selected item (based on source start offset only).lua" type="script" desc="Synchronize selected items relative to first selected item (based on source start offset only)(NOT BWF)">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-02-28T21:51:48Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7baa282d4e30f0fab6f0adf8c2a7ac9848217556/RA_Main_Scripts/RA-Synchronize%20selected%20items%20relative%20to%20first%20selected%20item%20(based%20on%20source%20start%20offset%20only).lua</source>
       </version>
     </reapack>
     <reapack name="RA-Toggle ALL ACTIVE send VOLUME envelopes IN PROJECT.lua" type="script" desc="Toggle ALL ACTIVE send VOLUME envelopes IN PROJECT.">
