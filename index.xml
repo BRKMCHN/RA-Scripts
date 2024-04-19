@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="7baa282d4e30f0fab6f0adf8c2a7ac9848217556">
+<index version="1" name="RA-Scripts" commit="06f55c3ca045e25b449fbe4e6d770a43f2573274">
   <category name="RA_Main_Scripts">
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
@@ -9,6 +9,11 @@
     <reapack name="RA-ADD-Take_Marker_CHX_DUB_on_SELECTED_ITEMS.lua" type="script" desc="Add Take Marker named CHX-DUB to SELECTED ITEMS.">
       <version name="1.0" author="RESERVOIR AUDIO / Amel Desharnais, with AI." time="2023-10-24T23:06:37Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/aefb30aaf62e87c83066412a881aa7a136e0abd1/RA_Main_Scripts/RA-ADD-Take_Marker_CHX_DUB_on_SELECTED_ITEMS.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS.lua" type="script" desc="Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-04-19T21:27:15Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/06f55c3ca045e25b449fbe4e6d770a43f2573274/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
       </version>
     </reapack>
     <reapack name="RA-DOUBLAGE_COUNT_ITEMS_on_selected_track.lua" type="script" desc="COUNT the number of ITEMS on SELECTED TRACK.">
