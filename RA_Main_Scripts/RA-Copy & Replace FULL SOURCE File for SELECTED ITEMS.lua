@@ -30,9 +30,9 @@ for i = 0, item_count - 1 do
 
     -- Check if the source file has been processed
     if not processed_files[filepath] then
-      -- Generate the new file path with the "_IZO" suffix
-      local path, filename = filepath:match("(.-)([^\\/]-%.?([^%.\\/]*))$")
-      local new_filename = path .. filename:gsub("%.", "_IZO.")
+      -- Generate the new file path with the "_IZO" suffix appended only before the extension
+      local path, filename, extension = filepath:match("(.-)([^\\/]-)%.([^%.\\/]+)$")
+      local new_filename = path .. filename .. "_IZO." .. extension
 
       -- Copy the file to the new location using Lua file operations
       local rfile = io.open(filepath, "rb")
@@ -70,4 +70,3 @@ reaper.Undo_EndBlock("Copy Source and Replace Media Item Takes", -1)
 -- Update the arrangement view and rebuild peaks
 reaper.UpdateArrange()
 reaper.Main_OnCommand(40441, 0)  -- Command ID for 'Rebuild peaks for selected items'
-
