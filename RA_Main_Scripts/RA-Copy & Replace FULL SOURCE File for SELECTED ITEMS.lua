@@ -1,4 +1,4 @@
--- @version 1.0
+-- @version 1.1
 -- @description Copy & Replace FULL SOURCE File for SELECTED ITEMS
 -- @author RESERVOIR AUDIO / MrBrock & AI
 
