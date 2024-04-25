@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="d70d7e49944fff26fc2150ea522b59fa7a621019">
+<index version="1" name="RA-Scripts" commit="5b5903e42fa05899bdb81df99850b09b36f4fca8">
   <category name="RA_Main_Scripts">
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
@@ -17,6 +17,11 @@
       </version>
       <version name="1.1" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-04-19T22:01:27Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/94ff26ea65b3e511ed05705b32c2471984a868c6/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-CROP ITEMS to REGION BOUNDS of same color as track.lua" type="script" desc="Crop items to region bounds of same color as track.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-04-25T20:13:25Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/5b5903e42fa05899bdb81df99850b09b36f4fca8/RA_Main_Scripts/RA-CROP%20ITEMS%20to%20REGION%20BOUNDS%20of%20same%20color%20as%20track.lua</source>
       </version>
     </reapack>
     <reapack name="RA-DOUBLAGE_COUNT_ITEMS_on_selected_track.lua" type="script" desc="COUNT the number of ITEMS on SELECTED TRACK.">
