@@ -1,9 +1,9 @@
--- @version 1.0
+-- @version 1.1
 -- @description Crop items to region bounds of same color as track.
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
 
 
--- Tolerance of out of bound items set to 30% (or 70% in bound if you prefer) 
+-- Tolerance of out of bound items set to 5% (or 95% in bound if you prefer) 
 
 reaper.Undo_BeginBlock() -- Start of Undo block
 
@@ -43,7 +43,7 @@ for i = 0, itemCount - 1 do
             local overlapStart = math.max(itemPos, region.pos)
             local overlapEnd = math.min(itemEnd, region.rgnEnd)
             local overlapLength = math.max(0, overlapEnd - overlapStart)
-            if (overlapLength / itemLength) >= 0.7 then -- At least 70% overlap
+            if (overlapLength / itemLength) >= 0.95 then -- At least 95% overlap
                 deleteItem = false
                 break
             end
