@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="10b67a7b52d20d5d8fed948d98185ac2e6ef3570">
+<index version="1" name="RA-Scripts" commit="2865d7c90ebea6ba4321b150a5059154fde40b7b">
   <category name="RA_Main_Scripts">
-    <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move items to selected track maintaining group proportions">
+    <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/10b67a7b52d20d5d8fed948d98185ac2e6ef3570/RA_Main_Scripts/RA-%20MOVE%20Selected%20item%20Chunk%20to%20selected%20TRACK%20per%20GROUP.lua</source>
+      </version>
+      <version name="1.1" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-09T14:21:26Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/2865d7c90ebea6ba4321b150a5059154fde40b7b/RA_Main_Scripts/RA-%20MOVE%20Selected%20item%20Chunk%20to%20selected%20TRACK%20per%20GROUP.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
@@ -123,6 +126,11 @@
     <reapack name="RA-Select PREVIOUS top-level folder track.lua" type="script" desc="Select PREVIOUS top-level folder track">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-30T16:57:06Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/babaa9ac05d36157f0fb844cd5a551197fb62553/RA_Main_Scripts/RA-Select%20PREVIOUS%20top-level%20folder%20track.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Set EMPTY ITEM source based on VORDIO ITEM NOTES (relative to PROJECT DIRECTORY).lua" type="script" desc="RA-Set EMPTY ITEM source based on VORDIO ITEM NOTES - From defined subfolder relative to PROJECT DIRECTORY">
+      <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-09T14:21:26Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/2865d7c90ebea6ba4321b150a5059154fde40b7b/RA_Main_Scripts/RA-Set%20EMPTY%20ITEM%20source%20based%20on%20VORDIO%20ITEM%20NOTES%20(relative%20to%20PROJECT%20DIRECTORY).lua</source>
       </version>
     </reapack>
     <reapack name="RA-Set selected envelope point to previous point value.lua" type="script" desc="SET selected envelope points to PREVIOUS envelope point value.">
