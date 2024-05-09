@@ -1,5 +1,5 @@
--- @description Move items to selected track maintaining group proportions
--- @version 1.0
+-- @description Move item chunks to selected track maintaining group proportions
+-- @version 1.1
 -- @author Reservoir Audio / Mr.Brock with AI
 
 -- Start of Undo block
@@ -54,6 +54,7 @@ end
 -- Move items to selected track maintaining group proportions
 local selectedItems = {}
 local itemCount = reaper.CountSelectedMediaItems(0)
+local missingTrackCount = 0
 for i = 0, itemCount - 1 do
     local item = reaper.GetSelectedMediaItem(0, i)
     table.insert(selectedItems, item)
@@ -70,7 +71,11 @@ if selectedTrack and next(earliestItemInGroup) ~= nil then
         local itemTrack = reaper.GetMediaItem_Track(item)
         local itemTrackNumber = getSelectedTrackNumber(itemTrack)
         local referenceTrackNumber = getSelectedTrackNumber(reaper.GetMediaItem_Track(earliestItemInGroup[getItemGroupMembership(item)]))
-        trackDifferences[item] = selectedTrackNumber - referenceTrackNumber + itemTrackNumber - referenceTrackNumber
+        if itemTrackNumber and referenceTrackNumber then
+            trackDifferences[item] = selectedTrackNumber - referenceTrackNumber + itemTrackNumber - referenceTrackNumber
+        else
+            missingTrackCount = missingTrackCount + 1
+        end
     end
 
     -- Move items to target track maintaining group proportions
@@ -100,13 +105,16 @@ if selectedTrack and next(earliestItemInGroup) ~= nil then
             local track = reaper.GetTrack(0, newTrackNumber)
             if track then
                 reaper.MoveMediaItemToTrack(item, track)
-            else
-                reaper.ShowMessageBox("Error: Unable to find track.", "Error", 0)
             end
         end
     end
 else
     reaper.ShowMessageBox("Please select at least one item and one track.", "Error", 0)
+end
+
+-- Report the number of items for which track couldn't be found
+if missingTrackCount > 0 then
+    reaper.ShowMessageBox("Couldn't find media track for "..missingTrackCount.." items.", "Track not found", 0)
 end
 
 -- Update the arrange view
