@@ -2,7 +2,7 @@
 -- @description Set linked selection of all group items to OFF
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
 
--- Disable offsetting overlapping media items vertically in REAPER if it's currently enabled
+-- Disable the option to select entire group when selecting one grouped item in REAPER if it's currently enabled.
 
 function DisableVerticalOverlapIfEnabled()
     local commandId = 41156 -- Command ID for the toggle action
