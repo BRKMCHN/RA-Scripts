@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="2865d7c90ebea6ba4321b150a5059154fde40b7b">
+<index version="1" name="RA-Scripts" commit="cf8b7c880688db4e3bf91e6c447ff98be1ba84c6">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -7,6 +7,11 @@
       </version>
       <version name="1.1" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-09T14:21:26Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/2865d7c90ebea6ba4321b150a5059154fde40b7b/RA_Main_Scripts/RA-%20MOVE%20Selected%20item%20Chunk%20to%20selected%20TRACK%20per%20GROUP.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA- SET relative grid snap to OFF.lua" type="script" desc="SET relative grid snap to OFF">
+      <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-14T14:38:53Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf8b7c880688db4e3bf91e6c447ff98be1ba84c6/RA_Main_Scripts/RA-%20SET%20relative%20grid%20snap%20to%20OFF.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
@@ -25,6 +30,9 @@
       </version>
       <version name="1.1" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-04-19T22:01:27Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/94ff26ea65b3e511ed05705b32c2471984a868c6/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
+      </version>
+      <version name="1.2" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-05-14T14:38:53Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf8b7c880688db4e3bf91e6c447ff98be1ba84c6/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
       </version>
     </reapack>
     <reapack name="RA-CROP ITEMS to REGION BOUNDS of same color as track.lua" type="script" desc="Crop items to region bounds of same color as track.">
@@ -113,21 +121,6 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Rename%20Items%20based%20on%20Parent%20Source%20File%20Name.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Rename Items based on Source File Name.lua" type="script" desc="RESERVOIR AUDIO / This script renames the active take of an audio item based on the file name of the source file.">
-      <version name="1.0" author="Thonex" time="2023-06-05T02:46:54Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Rename%20Items%20based%20on%20Source%20File%20Name.lua</source>
-      </version>
-    </reapack>
-    <reapack name="RA-Select NEXT top-level folder track.lua" type="script" desc="Select NEXT top-level folder track">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-30T16:57:06Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/babaa9ac05d36157f0fb844cd5a551197fb62553/RA_Main_Scripts/RA-Select%20NEXT%20top-level%20folder%20track.lua</source>
-      </version>
-    </reapack>
-    <reapack name="RA-Select PREVIOUS top-level folder track.lua" type="script" desc="Select PREVIOUS top-level folder track">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-30T16:57:06Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/babaa9ac05d36157f0fb844cd5a551197fb62553/RA_Main_Scripts/RA-Select%20PREVIOUS%20top-level%20folder%20track.lua</source>
-      </version>
-    </reapack>
     <reapack name="RA-Set EMPTY ITEM source based on VORDIO ITEM NOTES (relative to PROJECT DIRECTORY).lua" type="script" desc="RA-Set EMPTY ITEM source based on VORDIO ITEM NOTES - From defined subfolder relative to PROJECT DIRECTORY">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-09T14:21:26Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/2865d7c90ebea6ba4321b150a5059154fde40b7b/RA_Main_Scripts/RA-Set%20EMPTY%20ITEM%20source%20based%20on%20VORDIO%20ITEM%20NOTES%20(relative%20to%20PROJECT%20DIRECTORY).lua</source>
@@ -166,21 +159,6 @@
     <reapack name="RA-Synchronize selected items relative to first selected item (based on source start offset only).lua" type="script" desc="Synchronize selected items relative to first selected item (based on source start offset only)(NOT BWF)">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-02-28T21:51:48Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7baa282d4e30f0fab6f0adf8c2a7ac9848217556/RA_Main_Scripts/RA-Synchronize%20selected%20items%20relative%20to%20first%20selected%20item%20(based%20on%20source%20start%20offset%20only).lua</source>
-      </version>
-    </reapack>
-    <reapack name="RA-Toggle ALL ACTIVE send VOLUME envelopes IN PROJECT.lua" type="script" desc="Toggle ALL ACTIVE send VOLUME envelopes IN PROJECT.">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-01-15T19:22:50Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/588183e7072e29bcce90fcbe45492d286971071d/RA_Main_Scripts/RA-Toggle%20ALL%20ACTIVE%20send%20VOLUME%20envelopes%20IN%20PROJECT.lua</source>
-      </version>
-    </reapack>
-    <reapack name="RA-Toggle ALL send VOLUME envelopes IN PROJECT.lua" type="script" desc="Toggle ALL send VOLUME envelopes IN PROJECT.">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-01-15T19:22:50Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/588183e7072e29bcce90fcbe45492d286971071d/RA_Main_Scripts/RA-Toggle%20ALL%20send%20VOLUME%20envelopes%20IN%20PROJECT.lua</source>
-      </version>
-    </reapack>
-    <reapack name="RA-Toggle ALL send VOLUME envelopes on SELECTED tracks.lua" type="script" desc="Toggle ALL send VOLUME envelopes on SELECTED tracks.">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-01-15T19:22:50Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/588183e7072e29bcce90fcbe45492d286971071d/RA_Main_Scripts/RA-Toggle%20ALL%20send%20VOLUME%20envelopes%20on%20SELECTED%20tracks.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Unselect_Muted_Items.lua" type="script" desc="UNSELECT MUTED ITEMS among currently selected items.">
