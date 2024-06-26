@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="3497403fa0c09d81b849fdd7a0921aacb93c493f">
+<index version="1" name="RA-Scripts" commit="8cff66f84f47dfcfa53e22bd06729ca84c61423b">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -99,6 +99,9 @@
       <version name="2.1" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T18:49:19Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/3497403fa0c09d81b849fdd7a0921aacb93c493f/RA_Main_Scripts/RA-ITEM_EDGES_EXTEND.lua</source>
       </version>
+      <version name="2.2" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T19:08:01Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/8cff66f84f47dfcfa53e22bd06729ca84c61423b/RA_Main_Scripts/RA-ITEM_EDGES_EXTEND.lua</source>
+      </version>
     </reapack>
     <reapack name="RA-ITEM_EDGES_SHORTEN.lua" type="script" desc="Shorten selected ITEM EDGES.">
       <metadata>
@@ -124,6 +127,9 @@
       </version>
       <version name="2.1" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T18:49:19Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/3497403fa0c09d81b849fdd7a0921aacb93c493f/RA_Main_Scripts/RA-ITEM_EDGES_SHORTEN.lua</source>
+      </version>
+      <version name="2.2" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T19:08:01Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/8cff66f84f47dfcfa53e22bd06729ca84c61423b/RA_Main_Scripts/RA-ITEM_EDGES_SHORTEN.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Keep Selected Items with 1ch only.lua" type="script" desc="KEEP SELECTION OF ITEMS with only 1 channel, unselect the rest.">
