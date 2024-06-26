@@ -4,7 +4,7 @@
 -- @about This script will Extend selected ITEM EDGES by defined ammount at top of script, using nudge tool. Also adding take markers at loop points of source.
 
 -- Amount of frames to nudge
-local frames_to_nudge = 10  -- Change this value to nudge by a different number of frames
+local frames_to_nudge = 15  -- Change this value to nudge by a different number of frames
 
 -- Main function
 local function nudge_trim_edges(frames)
@@ -25,10 +25,13 @@ local function nudge_trim_edges(frames)
       reaper.SetTakeMarker(take, -1, "Start", 0)
       reaper.SetTakeMarker(take, -1, "End", source_length)
 
-      -- Nudge left trim by the specified number of frames
-      reaper.ApplyNudge(0, 0, 1, 2, frames, true, 0)
-      -- Nudge right trim by the specified number of frames
-      reaper.ApplyNudge(0, 0, 3, 2, frames, false, 0)
+      
+-- (Project, NudgeMode, NudgeWhat ( 1=left trim, 2=left edge (stretch), 3=right trim, 4=content)
+
+  --Left
+    reaper.ApplyNudge(0, 0, 1, 18, frames, true, 0)
+  --Right
+    reaper.ApplyNudge(0, 0, 3, 18, frames, false, 0)
     end
   end
 
@@ -37,4 +40,3 @@ local function nudge_trim_edges(frames)
 end
 
 nudge_trim_edges(frames_to_nudge)
-
