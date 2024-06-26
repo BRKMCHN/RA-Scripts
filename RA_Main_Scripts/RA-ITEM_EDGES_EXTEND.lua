@@ -1,7 +1,7 @@
--- @version 1.1
--- @description Shorten selected ITEM EDGES preserving source limit.
+-- @version 2.0
+-- @description Extend selected ITEM EDGES preserving source limit.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
--- @about This script will shorten selected ITEM EDGES by 20 frames (or user defined at top of script) while remaining within contents of the source. This script will write a text file to preserve orginal positionning data.
+-- @about This script will Extend selected ITEM EDGES by 20 frames (or user defined at top of script) while remaining within contents of the source. This script will write a text file to preserve orginal positionning data.
 
 -- Extend selected item edges by a specified number of frames and save original properties
 local frames_to_extend = 20  -- Change this value to extend by a different number of frames

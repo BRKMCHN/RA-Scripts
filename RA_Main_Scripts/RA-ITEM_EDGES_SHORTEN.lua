@@ -1,7 +1,7 @@
--- @version 1.2
--- @description Extend selected ITEM EDGES to original position.
+-- @version 2.0
+-- @description Shorten selected ITEM EDGES to original position.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
--- @about This script will extend selected ITEM EDGES by ammount set by EXTEND script.
+-- @about This script will Shorten selected ITEM EDGES back to original stored position data.
 
 -- Shorten selected item edges by a specified number of frames using stored properties
 
