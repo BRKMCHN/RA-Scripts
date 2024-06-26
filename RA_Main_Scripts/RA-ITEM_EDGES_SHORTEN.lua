@@ -1,4 +1,4 @@
--- @version 2.1
+-- @version 2.2
 -- @description Shorten selected ITEM EDGES.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
 -- @about This script will Shorten selected ITEM EDGES by defined ammount at top of script, using nudge tool.
@@ -6,7 +6,7 @@
 -- Shorten selected item edges by a specified number of frames using stored properties
 
 -- Amount of frames to nudge
-local frames_to_nudge = 5  -- Change this value to nudge by a different number of frames
+local frames_to_nudge = 10  -- Change this value to nudge by a different number of frames
 
 -- Main function
 local function nudge_trim_edges(frames)

@@ -1,10 +1,10 @@
--- @version 2.1
+-- @version 2.2
 -- @description Extend selected ITEM EDGES.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
 -- @about This script will Extend selected ITEM EDGES by defined ammount at top of script, using nudge tool. Also adding take markers at loop points of source.
 
 -- Amount of frames to nudge
-local frames_to_nudge = 5  -- Change this value to nudge by a different number of frames
+local frames_to_nudge = 10  -- Change this value to nudge by a different number of frames
 
 -- Main function
 local function nudge_trim_edges(frames)
