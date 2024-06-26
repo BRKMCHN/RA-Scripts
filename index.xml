@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="dcc42f012ac7161dc8edd4e38026ab0f50c2cdeb">
+<index version="1" name="RA-Scripts" commit="928b7cbb2a5b9bedf75fcabef8c66d0a3bb2875f">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -63,13 +63,13 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e/RA_Main_Scripts/RA-DOUBLAGE_Unmute_WAV_track_&amp;_MUTE_DUB+EDITED.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-ITEM_EDGES_EXTEND.lua" type="script" desc="Shorten selected ITEM EDGES preserving source limit.">
+    <reapack name="RA-ITEM_EDGES_EXTEND.lua" type="script" desc="Extend selected ITEM EDGES preserving source limit.">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 This script will shorten selected ITEM EDGES by 20 frames (or user defined at top of script) while remaining within contents of the source. This script will write a text file to preserve orginal positionning data.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This script will Extend selected ITEM EDGES by 20 frames (or user defined at top of script) while remaining within contents of the source. This script will write a text file to preserve orginal positionning data.\par}
 }
 ]]></description>
       </metadata>
@@ -79,14 +79,17 @@
       <version name="1.1" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T16:27:26Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/fb8dae3bd270370c65048af693d8eefaaabf2c4b/RA_Main_Scripts/RA-ITEM_EDGES_EXTEND.lua</source>
       </version>
+      <version name="2.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T16:36:47Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/928b7cbb2a5b9bedf75fcabef8c66d0a3bb2875f/RA_Main_Scripts/RA-ITEM_EDGES_EXTEND.lua</source>
+      </version>
     </reapack>
-    <reapack name="RA-ITEM_EDGES_SHORTEN.lua" type="script" desc="Extend selected ITEM EDGES to original position.">
+    <reapack name="RA-ITEM_EDGES_SHORTEN.lua" type="script" desc="Shorten selected ITEM EDGES to original position.">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 This script will extend selected ITEM EDGES by ammount set by EXTEND script.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This script will Shorten selected ITEM EDGES back to original stored position data.\par}
 }
 ]]></description>
       </metadata>
@@ -98,6 +101,9 @@
       </version>
       <version name="1.2" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T16:31:37Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/dcc42f012ac7161dc8edd4e38026ab0f50c2cdeb/RA_Main_Scripts/RA-ITEM_EDGES_SHORTEN.lua</source>
+      </version>
+      <version name="2.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T16:36:47Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/928b7cbb2a5b9bedf75fcabef8c66d0a3bb2875f/RA_Main_Scripts/RA-ITEM_EDGES_SHORTEN.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Keep Selected Items with 1ch only.lua" type="script" desc="KEEP SELECTION OF ITEMS with only 1 channel, unselect the rest.">
