@@ -1,4 +1,4 @@
--- @version 1.1
+-- @version 1.2
 -- @description Extend selected ITEM EDGES to original position.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
 -- @about This script will extend selected ITEM EDGES by ammount set by EXTEND script.
@@ -26,7 +26,7 @@ local function shorten_item_edges()
   end
 
   local sources_folder = project_directory .. "auto-align_temp/"
-  local file_path = sources_folder .. "item_properties.txt"
+  local file_path = sources_folder .. "Align_item_properties.txt"
   
   local file = io.open(file_path, "r")
   if not file then
