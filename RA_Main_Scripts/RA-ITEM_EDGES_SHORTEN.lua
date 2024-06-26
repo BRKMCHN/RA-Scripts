@@ -1,62 +1,31 @@
--- @version 2.0
--- @description Shorten selected ITEM EDGES to original position.
+-- @version 2.1
+-- @description Shorten selected ITEM EDGES.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
--- @about This script will Shorten selected ITEM EDGES back to original stored position data.
+-- @about This script will Shorten selected ITEM EDGES by defined ammount at top of script, using nudge tool.
 
 -- Shorten selected item edges by a specified number of frames using stored properties
 
--- Function to get project directory
-local function get_project_directory()
-  local _, project_path = reaper.EnumProjects(-1, "")
-  if project_path == "" then
-    return nil
-  end
-  return project_path:match("(.*/)")
-end
+-- Amount of frames to nudge
+local frames_to_nudge = 5  -- Change this value to nudge by a different number of frames
 
 -- Main function
-local function shorten_item_edges()
+local function nudge_trim_edges(frames)
   local num_items = reaper.CountSelectedMediaItems(0)
   if num_items == 0 then return end
 
-  local project_directory = get_project_directory()
-  if not project_directory then
-    reaper.ShowMessageBox("Please save the project first.", "Error", 0)
-    return
-  end
-
-  local sources_folder = project_directory .. "auto-align_temp/"
-  local file_path = sources_folder .. "Align_item_properties.txt"
-  
-  local file = io.open(file_path, "r")
-  if not file then
-    reaper.ShowMessageBox("Unable to open file: " .. file_path, "Error", 0)
-    return
-  end
-  
   reaper.Undo_BeginBlock()
-  
+
   for i = 0, num_items - 1 do
     local item = reaper.GetSelectedMediaItem(0, i)
-    local pos, start_offs, length = file:read("*n", "*n", "*n")
-    if pos and start_offs and length then
-      local take = reaper.GetActiveTake(item)
-      if take ~= nil then
-        reaper.SetMediaItemInfo_Value(item, "D_POSITION", pos)
-        reaper.SetMediaItemTakeInfo_Value(take, "D_STARTOFFS", start_offs)
-        reaper.SetMediaItemInfo_Value(item, "D_LENGTH", length)
-      end
-    else
-      reaper.ShowMessageBox("Mismatch between selected items and stored properties.", "Error", 0)
-      break
-    end
+    -- Nudge left trim by the specified number of frames
+    reaper.ApplyNudge(0, 0, 1, 2, frames, false, 0)
+    -- Nudge right trim by the specified number of frames
+    reaper.ApplyNudge(0, 0, 3, 2, frames, true, 0)
   end
-  
-  file:close()
-  os.remove(file_path)  -- Delete the file after restoring properties
-  
-  reaper.Undo_EndBlock("Shorten item edges using stored properties", -1)
+
+  reaper.Undo_EndBlock("Nudge trims by " .. frames .. " frames", -1)
   reaper.UpdateArrange()
 end
 
-shorten_item_edges()
+nudge_trim_edges(frames_to_nudge)
+
