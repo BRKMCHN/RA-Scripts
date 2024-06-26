@@ -1,63 +1,62 @@
 -- @version 1.0
--- @description Extend selected ITEM EDGES preserving source limit.
+-- @description Extend selected ITEM EDGES to original position.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
--- @about This script will extend selected ITEM EDGES by 20 frames (user defined at top of script) while remaining within contents of the source.
+-- @about This script will extend selected ITEM EDGES by ammount set by EXTEND script.
 
--- Shorten selected item edges by a specified number of frames
-local frames_to_shorten = 20  -- Change this value to shorten by a different number of frames
+-- Shorten selected item edges by a specified number of frames using stored properties
 
--- Convert frames to time based on project frame rate
-local function frames_to_time(frames)
-  local fps = reaper.TimeMap_curFrameRate(0)
-  return frames / fps
+-- Function to get project directory
+local function get_project_directory()
+  local _, project_path = reaper.EnumProjects(-1, "")
+  if project_path == "" then
+    return nil
+  end
+  return project_path:match("(.*/)")
 end
 
 -- Main function
-local function shorten_item_edges(frames)
+local function shorten_item_edges()
   local num_items = reaper.CountSelectedMediaItems(0)
   if num_items == 0 then return end
 
-  local shorten_time = frames_to_time(frames)
+  local project_directory = get_project_directory()
+  if not project_directory then
+    reaper.ShowMessageBox("Please save the project first.", "Error", 0)
+    return
+  end
 
+  local sources_folder = project_directory .. "SOURCES/auto-align_temp/"
+  local file_path = sources_folder .. "item_properties.txt"
+  
+  local file = io.open(file_path, "r")
+  if not file then
+    reaper.ShowMessageBox("Unable to open file: " .. file_path, "Error", 0)
+    return
+  end
+  
   reaper.Undo_BeginBlock()
   
   for i = 0, num_items - 1 do
     local item = reaper.GetSelectedMediaItem(0, i)
-    local pos = reaper.GetMediaItemInfo_Value(item, "D_POSITION")
-    local length = reaper.GetMediaItemInfo_Value(item, "D_LENGTH")
-    local take = reaper.GetActiveTake(item)
-    
-    if take ~= nil then
-      local start_offs = reaper.GetMediaItemTakeInfo_Value(take, "D_STARTOFFS")
-      local source = reaper.GetMediaItemTake_Source(take)
-      local source_length = reaper.GetMediaSourceLength(source)
-
-      -- Calculate new start offset and position
-      local new_start_offs = start_offs + shorten_time
-      local new_pos = pos + shorten_time
-
-      -- Ensure the new start offset and length are within valid range
-      if new_start_offs > source_length then
-        new_start_offs = source_length
-        new_pos = pos + (source_length - start_offs)
+    local pos, start_offs, length = file:read("*n", "*n", "*n")
+    if pos and start_offs and length then
+      local take = reaper.GetActiveTake(item)
+      if take ~= nil then
+        reaper.SetMediaItemInfo_Value(item, "D_POSITION", pos)
+        reaper.SetMediaItemTakeInfo_Value(take, "D_STARTOFFS", start_offs)
+        reaper.SetMediaItemInfo_Value(item, "D_LENGTH", length)
       end
-
-      -- Calculate new length and ensure it does not become negative
-      local new_length = length - 2 * shorten_time
-      if new_length < 0 then
-        new_length = 0
-      end
-
-      -- Apply the calculated values
-      reaper.SetMediaItemInfo_Value(item, "D_POSITION", new_pos)
-      reaper.SetMediaItemTakeInfo_Value(take, "D_STARTOFFS", new_start_offs)
-      reaper.SetMediaItemInfo_Value(item, "D_LENGTH", new_length)
+    else
+      reaper.ShowMessageBox("Mismatch between selected items and stored properties.", "Error", 0)
+      break
     end
   end
   
-  reaper.Undo_EndBlock("Shorten item edges by " .. frames .. " frames", -1)
+  file:close()
+  os.remove(file_path)  -- Delete the file after restoring properties
+  
+  reaper.Undo_EndBlock("Shorten item edges using stored properties", -1)
   reaper.UpdateArrange()
 end
 
-shorten_item_edges(frames_to_shorten)
-
+shorten_item_edges()
