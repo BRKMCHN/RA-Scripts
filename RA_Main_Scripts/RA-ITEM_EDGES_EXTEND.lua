@@ -1,4 +1,4 @@
--- @version 1.0
+-- @version 1.1
 -- @description Shorten selected ITEM EDGES preserving source limit.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
 -- @about This script will shorten selected ITEM EDGES by 20 frames (or user defined at top of script) while remaining within contents of the source. This script will write a text file to preserve orginal positionning data.
@@ -43,11 +43,11 @@ local function extend_item_edges(frames)
     return
   end
   
-  local sources_folder = project_directory .. "SOURCES/auto-align_temp/"
+  local sources_folder = project_directory .. "auto-align_temp/"
   
   if not create_directory(sources_folder) then return end
   
-  local file_path = sources_folder .. "item_properties.txt"
+  local file_path = sources_folder .. "Align_item_properties.txt"
   local file = io.open(file_path, "w")
   if not file then
     reaper.ShowMessageBox("Unable to create file: " .. file_path, "Error", 0)
