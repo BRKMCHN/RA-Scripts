@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="c8bd1b382f896db7b8385fe2b3d70057567b2f22">
+<index version="1" name="RA-Scripts" commit="1e5896335bb3be603d82f88966efe1f08670dbb3">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -69,7 +69,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 This script will shorten selected ITEM EDGES by 20 frames (or user defined at top of script) while remaining within contents of the source.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This script will shorten selected ITEM EDGES by 20 frames (or user defined at top of script) while remaining within contents of the source. This script will write a text file to preserve orginal positionning data.\par}
 }
 ]]></description>
       </metadata>
@@ -77,13 +77,13 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/c8bd1b382f896db7b8385fe2b3d70057567b2f22/RA_Main_Scripts/RA-ITEM_EDGES_EXTEND.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-ITEM_EDGES_SHORTEN.lua" type="script" desc="Extend selected ITEM EDGES preserving source limit.">
+    <reapack name="RA-ITEM_EDGES_SHORTEN.lua" type="script" desc="Extend selected ITEM EDGES to original position.">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 This script will extend selected ITEM EDGES by 20 frames (user defined at top of script) while remaining within contents of the source.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This script will extend selected ITEM EDGES by ammount set by EXTEND script.\par}
 }
 ]]></description>
       </metadata>
