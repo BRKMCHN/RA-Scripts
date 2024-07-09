@@ -1,4 +1,4 @@
--- @version 1.0
+-- @version 1.1
 -- @description Unspread items on temporary tracks back to its place.
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
 -- @about Moves every item on the ALIGN_TEMP tracks below selected tracks back to selected track.
@@ -36,7 +36,9 @@ local numSelectedTracks = reaper.CountSelectedTracks(0)
 -- Process each selected track
 for i = 0, numSelectedTracks - 1 do
     local track = reaper.GetSelectedTrack(0, i)
-    moveItemsBackAndRemoveTemp(track)
+    if track then
+        moveItemsBackAndRemoveTemp(track)
+    end
 end
 
 -- End undo block
@@ -44,4 +46,3 @@ reaper.Undo_EndBlock("Move items back from ALIGN_TEMP track and remove empty tra
 
 -- Update the arrange view
 reaper.UpdateArrange()
-
