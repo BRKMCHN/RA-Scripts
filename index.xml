@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="98dfbe42ad8aed11f7c13602889542138aa63123">
+<index version="1" name="RA-Scripts" commit="a28fbb0d081a11ac59c9f5af18231eeac05bcb67">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -270,6 +270,9 @@
       </metadata>
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-07-09T15:41:46Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/98dfbe42ad8aed11f7c13602889542138aa63123/RA_Main_Scripts/RA-Unspread_to_2_tracks_for_Align.lua</source>
+      </version>
+      <version name="1.1" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-07-09T16:10:02Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a28fbb0d081a11ac59c9f5af18231eeac05bcb67/RA_Main_Scripts/RA-Unspread_to_2_tracks_for_Align.lua</source>
       </version>
     </reapack>
   </category>
