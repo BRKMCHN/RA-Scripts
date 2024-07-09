@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="3b0724ec53119a74f186accf645ebcd86eb58a9e">
+<index version="1" name="RA-Scripts" commit="98dfbe42ad8aed11f7c13602889542138aa63123">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -83,7 +83,7 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 This script will Extend selected ITEM EDGES by defined ammount at top of script, using nudge tool. Also adding take markers at loop points of source.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This script will Extend selected ITEM EDGES by defined ammount at top of script, using nudge tool. Also adding take markers at loop points of source if it extends past loop points.\par}
 }
 ]]></description>
       </metadata>
@@ -104,6 +104,9 @@
       </version>
       <version name="2.3" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-27T14:35:23Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/3b0724ec53119a74f186accf645ebcd86eb58a9e/RA_Main_Scripts/RA-ITEM_EDGES_EXTEND.lua</source>
+      </version>
+      <version name="2.4" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-07-09T15:41:46Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/98dfbe42ad8aed11f7c13602889542138aa63123/RA_Main_Scripts/RA-ITEM_EDGES_EXTEND.lua</source>
       </version>
     </reapack>
     <reapack name="RA-ITEM_EDGES_SHORTEN.lua" type="script" desc="Shorten selected ITEM EDGES.">
@@ -226,6 +229,20 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/d70d7e49944fff26fc2150ea522b59fa7a621019/RA_Main_Scripts/RA-Shorten%20EDGES%20of%20TIME%20SELECTION%20by%205s.lua</source>
       </version>
     </reapack>
+    <reapack name="RA-Spread_to_2_tracks_for_Align.lua" type="script" desc="Spread every other selected item of selected tracks to a new temporary track.">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Moves every other item to a new track called ALIGN_TEMP, to avoid overlapping issues.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-07-09T15:41:46Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/98dfbe42ad8aed11f7c13602889542138aa63123/RA_Main_Scripts/RA-Spread_to_2_tracks_for_Align.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Swap item volume and take volume.lua" type="script" desc="SWAP the ITEM GAIN with TAKE GAIN.">
       <version name="1.0" author="MrBrock with advAIsor" time="2023-07-28T02:12:26Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/8dcef1864026e2544476aff8593cc1f5b8718828/RA_Main_Scripts/RA-Swap%20item%20volume%20and%20take%20volume.lua</source>
@@ -239,6 +256,20 @@
     <reapack name="RA-Unselect_Muted_Items.lua" type="script" desc="UNSELECT MUTED ITEMS among currently selected items.">
       <version name="1.0" author="Fante + AI" time="2023-06-28T17:03:28Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/2836c76bf27ffd99afd1e2574fe0eb148032ae13/RA_Main_Scripts/RA-Unselect_Muted_Items.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Unspread_to_2_tracks_for_Align.lua" type="script" desc="Unspread items on temporary tracks back to its place.">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Moves every item on the ALIGN_TEMP tracks below selected tracks back to selected track.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-07-09T15:41:46Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/98dfbe42ad8aed11f7c13602889542138aa63123/RA_Main_Scripts/RA-Unspread_to_2_tracks_for_Align.lua</source>
       </version>
     </reapack>
   </category>
