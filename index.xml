@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="8a4dc5e276330d3ae002b56054bb541c3c96d06d">
+<index version="1" name="RA-Scripts" commit="90b1515929613d2e81b2771d4b40b532d345a5f0">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -41,6 +41,9 @@
       </version>
       <version name="2.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-08-30T00:25:26Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/8a4dc5e276330d3ae002b56054bb541c3c96d06d/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
+      </version>
+      <version name="2.1" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-09-06T16:02:58Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/90b1515929613d2e81b2771d4b40b532d345a5f0/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
       </version>
     </reapack>
     <reapack name="RA-CROP ITEMS to REGION BOUNDS of same color as track.lua" type="script" desc="Crop items to region bounds of same color as track.">
