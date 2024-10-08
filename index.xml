@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="6310a7ead3067b00fd03b12d7ff189b459a8feb6">
+<index version="1" name="RA-Scripts" commit="5f4b309007c72a229b8cd8594c08b9a39fee445c">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -25,6 +25,9 @@
       </version>
       <version name="1.1" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-10-08T14:19:04Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/6310a7ead3067b00fd03b12d7ff189b459a8feb6/RA_Main_Scripts/RA-%20SPLIT%20selected%20empty%20items%20at%20EDIT%20CURSOR%20along%20with%20text%20split%20prompt.lua</source>
+      </version>
+      <version name="1.2" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-10-08T14:22:49Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/5f4b309007c72a229b8cd8594c08b9a39fee445c/RA_Main_Scripts/RA-%20SPLIT%20selected%20empty%20items%20at%20EDIT%20CURSOR%20along%20with%20text%20split%20prompt.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
