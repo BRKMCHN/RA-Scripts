@@ -1,4 +1,4 @@
--- @version 1.2
+-- @version 1.3
 -- @description SPLIT selected empty items at EDIT CURSOR along with text split prompt.
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
 
@@ -52,8 +52,8 @@ for i = 0, num_selected - 1 do
         -- Get the notes from the selected item
         retval, notes = reaper.GetSetMediaItemInfo_String(item, "P_NOTES", "", false)
         
-        -- Prompt the user for input with an extended width
-        retval, user_input = reaper.GetUserInputs("Edit Item Notes", 1, "Enter new notes: insert character @,extrawidth=400", notes)
+        -- Prompt the user for input with an extended width and custom separator
+retval, user_input = reaper.GetUserInputs("Edit Item Notes", 1, "Enter new notes: insert character @,extrawidth=400,separator=|", notes)
         
         -- Check if the user pressed Cancel
         if retval == false or user_input == "" then
