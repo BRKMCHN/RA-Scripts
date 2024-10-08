@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="7ecd5de3a62c5819efee8bf3118e4605c6aaaaf0">
+<index version="1" name="RA-Scripts" commit="accef6d3e4cf47a18aef4828742208dede70dbe8">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -17,6 +17,11 @@
     <reapack name="RA- SET relative grid snap to OFF.lua" type="script" desc="SET relative grid snap to OFF">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-14T14:38:53Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf8b7c880688db4e3bf91e6c447ff98be1ba84c6/RA_Main_Scripts/RA-%20SET%20relative%20grid%20snap%20to%20OFF.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA- SPLIT selected empty items at EDIT CURSOR along with text split prompt.lua" type="script" desc="SPLIT selected empty items at EDIT CURSOR along with text split prompt.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-10-08T14:16:03Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/accef6d3e4cf47a18aef4828742208dede70dbe8/RA_Main_Scripts/RA-%20SPLIT%20selected%20empty%20items%20at%20EDIT%20CURSOR%20along%20with%20text%20split%20prompt.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Add Envelope points based on markers within time selection.lua" type="script" desc="ADD Envelope points to selected envelope according to markers within time selection.">
