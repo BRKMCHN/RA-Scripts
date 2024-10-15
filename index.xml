@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="22211cdd3b3ac60fd10ad6838c91640b41e83cb7">
+<index version="1" name="RA-Scripts" commit="b5d9922a27fb2c188bd400960d46e6fb7b596274">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -303,6 +303,11 @@
       </version>
       <version name="1.1" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-07-09T16:10:02Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a28fbb0d081a11ac59c9f5af18231eeac05bcb67/RA_Main_Scripts/RA-Unspread_to_2_tracks_for_Align.lua</source>
+      </version>
+    </reapack>
+    <reapack name="Sort selected items by lenght and optimize vertical track usage within overlap threshold..lua" type="script" desc="Sort selected items by lenght and optimize vertical track usage within overlap threshold.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-10-15T14:30:05Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/b5d9922a27fb2c188bd400960d46e6fb7b596274/RA_Main_Scripts/Sort%20selected%20items%20by%20lenght%20and%20optimize%20vertical%20track%20usage%20within%20overlap%20threshold..lua</source>
       </version>
     </reapack>
   </category>
