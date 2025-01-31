@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="b5d9922a27fb2c188bd400960d46e6fb7b596274">
+<index version="1" name="RA-Scripts" commit="e087c94e31d4509c20e0642e7c09447b131ff6eb">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -259,6 +259,11 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/d70d7e49944fff26fc2150ea522b59fa7a621019/RA_Main_Scripts/RA-Shorten%20EDGES%20of%20TIME%20SELECTION%20by%205s.lua</source>
       </version>
     </reapack>
+    <reapack name="RA-Snap_Selected_Items_Edges_to_Nearest_Grid_Position.lua" type="script" desc="Snap selected item's edges to nearest grid position.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2025-01-31T16:32:45Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/e087c94e31d4509c20e0642e7c09447b131ff6eb/RA_Main_Scripts/RA-Snap_Selected_Items_Edges_to_Nearest_Grid_Position.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Spread_to_2_tracks_for_Align.lua" type="script" desc="Spread every other selected item of selected tracks to a new temporary track.">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
@@ -312,11 +317,11 @@
     </reapack>
   </category>
   <metadata>
-    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 Courier;}}
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Scripts custom destin\u233?s \u224? faciliter nos workflows de post-production sonore chez Reservoir Audio, un studio bas\u233? \u224? Montreal.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Scripts custom destin\u233 ?s \u224 ? faciliter nos workflows de post-production sonore chez Reservoir Audio, un studio bas\u233 ? \u224 ? Montreal.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 ~ Mark\par}
 }
 ]]></description>
