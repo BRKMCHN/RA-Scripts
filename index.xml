@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="e3e400ab4e1e5427ba2dd75692598cd978dc199d">
+<index version="1" name="RA-Scripts" commit="5b3bac2ea46ed7fa2d0943503633caeccd20b4a9">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -227,6 +227,11 @@
     <reapack name="RA-Render &amp; RENAME item with STAMP to NEW TAKE &amp; Open in external editor.lua" type="script" desc="Render &amp; RENAME item with STAMP to NEW TAKE &amp; Open in external editor">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock with AI" time="2024-09-26T00:17:41Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7ecd5de3a62c5819efee8bf3118e4605c6aaaaf0/RA_Main_Scripts/RA-Render%20&amp;%20RENAME%20item%20with%20STAMP%20to%20NEW%20TAKE%20&amp;%20Open%20in%20external%20editor.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Select items on selected track exactly at edit Cursor.lua" type="script" desc="Select items on selected track exactly at edit Cursor">
+      <version name="1.0" author="MrBrock / AI" time="2025-01-31T20:48:42Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/5b3bac2ea46ed7fa2d0943503633caeccd20b4a9/RA_Main_Scripts/RA-Select%20items%20on%20selected%20track%20exactly%20at%20edit%20Cursor.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Set EMPTY ITEM source based on VORDIO ITEM NOTES (relative to PROJECT DIRECTORY).lua" type="script" desc="RA-Set EMPTY ITEM source based on VORDIO ITEM NOTES - From defined subfolder relative to PROJECT DIRECTORY">
