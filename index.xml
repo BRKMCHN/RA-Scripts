@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="54fe2eee8b42a512b7e9c07e3d68a9629b324e4f">
+<index version="1" name="RA-Scripts" commit="dc936fe645bd78b5713e52258780c89b26dfd96e">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -222,6 +222,11 @@
     <reapack name="RA-Rename Items based on Parent Source File Name.lua" type="script" desc="RENAME the active take of a SELECTED audio item, based on the name of the SOURCE file. (It works with sections or reversed sources)">
       <version name="1.0" author="Frankfante assembled with original scripts by Thonex, nofish and spk77" time="2023-06-05T02:46:54Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Rename%20Items%20based%20on%20Parent%20Source%20File%20Name.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua" type="script" desc="REPORT Project info to TXT file with parameter value">
+      <version name="1.0" author="MrBrock Edit from Reapack script &quot;edgemeal_Save project plugin info to text file.lua&quot; &amp; AI" time="2025-02-12T20:00:33Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/dc936fe645bd78b5713e52258780c89b26dfd96e/RA_Main_Scripts/RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Select items on selected track exactly at edit Cursor.lua" type="script" desc="Select items on selected track exactly at edit Cursor">
