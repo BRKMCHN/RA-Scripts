@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="dc936fe645bd78b5713e52258780c89b26dfd96e">
+<index version="1" name="RA-Scripts" commit="f26e5f9f572ec480a388f9d6ba4520df5cad81d7">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -323,6 +323,25 @@
       </version>
       <version name="1.1" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-07-09T16:10:02Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a28fbb0d081a11ac59c9f5af18231eeac05bcb67/RA_Main_Scripts/RA-Unspread_to_2_tracks_for_Align.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA_SELECT_FROM_SAME_SOURCE_TIME_SELECTION.lua" type="script" desc="SELECT ITEMS WITH SAME SOURCE AS FIRST SELECTED ITEM -- WITHIN TIME SELECTION">
+      <version name="1.0" author="Reservoir Audio / Amel with AI -- adapted from X-Raym's script (https://github.com/X-Raym/REAPER-EEL-Scripts)" time="2025-03-12T19:08:43Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/f26e5f9f572ec480a388f9d6ba4520df5cad81d7/RA_Main_Scripts/RA_SELECT_FROM_SAME_SOURCE_TIME_SELECTION.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA_SET_SPACE_BETWEEN_SELECTED_ITEMS.lua" type="script" desc="SET SPACE BETWEEN SELECTED ITEMS (prompted user defined value)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Sets a user defined amount of time between each selected item, preserving start position of first selected item.\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="Reservoir Audio / Amel with AI" time="2025-03-12T19:08:43Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/f26e5f9f572ec480a388f9d6ba4520df5cad81d7/RA_Main_Scripts/RA_SET_SPACE_BETWEEN_SELECTED_ITEMS.lua</source>
       </version>
     </reapack>
   </category>
