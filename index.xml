@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="c15e7cfb2a40315d5aa52ef5b436725178c4a420">
+<index version="1" name="RA-Scripts" commit="e08b9808dcb88e2b7c4be021b23d6ad7a65e671f">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -76,16 +76,6 @@
     <reapack name="RA-DOUBLAGE_COUNT_ITEMS_on_selected_track_within_time_selection.lua" type="script" desc="COUNT the number of ITEMS on SELECTED TRACK. (WITHIN TIME SELECTION)">
       <version name="1.0" author="Amel Desharnais, with AI." time="2023-10-23T14:30:04Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e/RA_Main_Scripts/RA-DOUBLAGE_COUNT_ITEMS_on_selected_track_within_time_selection.lua</source>
-      </version>
-    </reapack>
-    <reapack name="RA-DOUBLAGE_Mute_WAV_track_&amp;_UNMUTE_DUB+EDITED.lua" type="script" desc="MUTE WAV Track and UNMUTE DUB + EDITED named tracks.">
-      <version name="1.0" author="Amel Desharnais, with AI." time="2023-10-23T14:30:04Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e/RA_Main_Scripts/RA-DOUBLAGE_Mute_WAV_track_&amp;_UNMUTE_DUB+EDITED.lua</source>
-      </version>
-    </reapack>
-    <reapack name="RA-DOUBLAGE_Unmute_WAV_track_&amp;_MUTE_DUB+EDITED.lua" type="script" desc="UNMUTE WAV track and MUTE DUB + EDITED named tracks.">
-      <version name="1.0" author="Amel Desharnais, with AI." time="2023-10-23T14:30:04Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/ddb80d66007e33d0d1f91e07ed4c69f19afbcc7e/RA_Main_Scripts/RA-DOUBLAGE_Unmute_WAV_track_&amp;_MUTE_DUB+EDITED.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Duplicate_Previous_Take_Markers.lua" type="script" desc="Duplicate previous take's markers.">
