@@ -1,26 +1,33 @@
--- @description RA-Set EMPTY ITEM source based on VORDIO ITEM NOTES - From defined subfolder relative to PROJECT DIRECTORY
--- @version 1.0
+-- @description RA-Set EMPTY ITEM source based on VORDIO ITEM NOTES - From media folder relative to PROJECT DIRECTORY
+-- @version 1.1
 -- @author Reservoir Audio / Mr.Brock with AI
+
+--Prompt: YES will append .wav if you have already transcoded compatible audio in Vordio. NO will fetch raw source, including video if name matches. Cancel aborts the script.
 
 -- Function to log messages to the REAPER console
 local function log(msg)
     reaper.ShowConsoleMsg(msg .. "\n")
 end
 
+-- Prompt for .wav extension choice
+local response = reaper.MB("Append .wav to filenames?", "File Extension Choice", 3)
+local append_wav = (response == 6)
+if response == 2 then return end -- Cancel selected, abort script
+
 -- Get the current project path
 local project_path = reaper.GetProjectPath("")
 
--- Define the specific subfolder path
-local subfolder = "/ORD2024_RA_BUMPERS"
+-- Identify media folder from project settings
+local media_folder = reaper.GetProjectPath("")
+local project_name = reaper.GetProjectName(0, "")
+local media_folder_path = media_folder  -- Use project path directly
 
 -- Function to check if a file exists recursively in a directory and its subdirectories
 local function findFileRecursively(directory, fileName)
     local idx = 0
     while true do
         local file = reaper.EnumerateFiles(directory, idx)
-        if not file then
-            break
-        end
+        if not file then break end
         if string.lower(file) == string.lower(fileName) then  -- Case insensitive match
             return directory .. "/" .. file
         end
@@ -30,13 +37,9 @@ local function findFileRecursively(directory, fileName)
     idx = 0
     while true do
         local subdir = reaper.EnumerateSubdirectories(directory, idx)
-        if not subdir then
-            break
-        end
+        if not subdir then break end
         local foundPath = findFileRecursively(directory .. "/" .. subdir, fileName)
-        if foundPath then
-            return foundPath
-        end
+        if foundPath then return foundPath end
         idx = idx + 1
     end
     return nil
@@ -56,9 +59,9 @@ for i = 0, count - 1 do
             local item_notes = reaper.ULT_GetMediaItemNote(item)
             local startInSource, filename = item_notes:match("CID:%d+%.%d+|(%d+%.%d+)|%d+%.%d+|(.+)")
             if filename and startInSource then
-                -- Append '.wav' to the filename regardless of existing extension
-                local wavFilename = filename .. ".wav"
-                local filePath = findFileRecursively(project_path .. subfolder, wavFilename)
+                -- Optionally append '.wav' to the filename
+                local wavFilename = append_wav and (filename .. ".wav") or filename
+                local filePath = findFileRecursively(media_folder_path, wavFilename)
                 if filePath then
                     -- Set the source for the take from the found file path
                     reaper.BR_SetTakeSourceFromFile(take, filePath, true)
@@ -87,4 +90,3 @@ reaper.Main_OnCommand(40441, 0)  -- Rebuild peaks for selected items
 if #missing_files > 0 then
     log("The following files were not found:\n" .. table.concat(missing_files, "\n"))
 end
-
