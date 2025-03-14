@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="e08b9808dcb88e2b7c4be021b23d6ad7a65e671f">
+<index version="1" name="RA-Scripts" commit="bb48d84646c6cf907246d524e646c1b007e9e4dc">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -252,9 +252,14 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7baa282d4e30f0fab6f0adf8c2a7ac9848217556/RA_Main_Scripts/RA-Set%20Vertical%20lane%20spacing%20of%20overlapping%20items%20to%20OFF.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Shorten EDGES of TIME SELECTION by 5s.lua" type="script" desc="Shorten edges of time selection by 5s">
-      <version name="1.0" author="RESERVOIR AUDIO" time="2024-04-25T16:18:42Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/d70d7e49944fff26fc2150ea522b59fa7a621019/RA_Main_Scripts/RA-Shorten%20EDGES%20of%20TIME%20SELECTION%20by%205s.lua</source>
+    <reapack name="RA-Shorten EDGES of TIME SELECTION by 1 frame.lua" type="script" desc="Shorten edges of time selection by 1 frame">
+      <version name="1.1" author="RESERVOIR AUDIO" time="2025-03-14T18:50:20Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/bb48d84646c6cf907246d524e646c1b007e9e4dc/RA_Main_Scripts/RA-Shorten%20EDGES%20of%20TIME%20SELECTION%20by%201%20frame.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Shorten EDGES of TIME SELECTION by USER DEFINED time.lua" type="script" desc="Shorten edges of time selection by user-defined time">
+      <version name="1.1" author="RESERVOIR AUDIO" time="2025-03-14T18:50:20Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/bb48d84646c6cf907246d524e646c1b007e9e4dc/RA_Main_Scripts/RA-Shorten%20EDGES%20of%20TIME%20SELECTION%20by%20USER%20DEFINED%20time.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Snap_Selected_Items_Edges_to_Nearest_Grid_Position.lua" type="script" desc="Snap selected item's edges to nearest grid position.">
