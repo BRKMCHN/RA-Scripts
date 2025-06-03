@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="3cb908fec28a16134016b804b519d0c73f019cec">
+<index version="1" name="RA-Scripts" commit="cba87f15711b174981f611ca98d515d0439a0529">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -9,9 +9,12 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/2865d7c90ebea6ba4321b150a5059154fde40b7b/RA_Main_Scripts/RA-%20MOVE%20Selected%20item%20Chunk%20to%20selected%20TRACK%20per%20GROUP.lua</source>
       </version>
     </reapack>
-    <reapack name="RA- MOVE Selected item Chunk to selected TRACK.lua" type="script" desc="Move item chunks to selected track maintaining vertical spacing">
+    <reapack name="RA- MOVE Selected item Chunk to selected TRACK.lua" type="script" desc="Move item chunks to selected track maintaining their relative vertical span">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-07-25T15:38:20Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/2e220fa6daaac1990b8af953b0b3dc1c03e81aa8/RA_Main_Scripts/RA-%20MOVE%20Selected%20item%20Chunk%20to%20selected%20TRACK.lua</source>
+      </version>
+      <version name="1.1" author="Reservoir Audio / Mr.Brock with AI" time="2025-06-03T16:52:08Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cba87f15711b174981f611ca98d515d0439a0529/RA_Main_Scripts/RA-%20MOVE%20Selected%20item%20Chunk%20to%20selected%20TRACK.lua</source>
       </version>
     </reapack>
     <reapack name="RA- SET relative grid snap to OFF.lua" type="script" desc="SET relative grid snap to OFF">
@@ -41,6 +44,11 @@
     <reapack name="RA-ADD-Take_Marker_CHX_DUB_on_SELECTED_ITEMS.lua" type="script" desc="Add Take Marker named CHX-DUB to SELECTED ITEMS.">
       <version name="1.0" author="RESERVOIR AUDIO / Amel Desharnais, with AI." time="2023-10-24T23:06:37Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/aefb30aaf62e87c83066412a881aa7a136e0abd1/RA_Main_Scripts/RA-ADD-Take_Marker_CHX_DUB_on_SELECTED_ITEMS.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Align content start to nearest frame.lua" type="script" desc="Align (snap) selected item's content start position to nearest frame.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2025-06-03T16:52:08Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cba87f15711b174981f611ca98d515d0439a0529/RA_Main_Scripts/RA-Align%20content%20start%20to%20nearest%20frame.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS.lua" type="script" desc="Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS">
