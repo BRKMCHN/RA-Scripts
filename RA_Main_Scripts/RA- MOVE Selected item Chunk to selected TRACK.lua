@@ -1,11 +1,22 @@
--- @description Move item chunks to selected track maintaining vertical spacing
--- @version 1.0
+-- @description Move item chunks to selected track maintaining their relative vertical span
+-- @version 1.1
 -- @author Reservoir Audio / Mr.Brock with AI
 
 
 -- Function to get the track number of a track
 local function getTrackNumber(track)
     return reaper.GetMediaTrackInfo_Value(track, "IP_TRACKNUMBER")
+end
+
+-- Function to get total number of tracks in project
+local function getTrackCount()
+    return reaper.CountTracks(0)
+end
+
+-- Function to create new track at end
+local function insertTrackAtEnd()
+    local trackCount = getTrackCount()
+    reaper.InsertTrackAtIndex(trackCount, true) -- Insert at end
 end
 
 -- Move items to selected track maintaining vertical position
@@ -33,6 +44,7 @@ local selectedTrackNumber = getTrackNumber(selectedTrack)
 -- Get the track numbers of the tracks containing selected items
 local itemTrackNumbers = {}
 local lowestTrackNumber = math.huge
+local highestTrackNumber = -math.huge
 for _, item in ipairs(selectedItems) do
     local itemTrack = reaper.GetMediaItem_Track(item)
     local itemTrackNumber = getTrackNumber(itemTrack)
@@ -40,9 +52,25 @@ for _, item in ipairs(selectedItems) do
     if itemTrackNumber < lowestTrackNumber then
         lowestTrackNumber = itemTrackNumber
     end
+    if itemTrackNumber > highestTrackNumber then
+        highestTrackNumber = itemTrackNumber
+    end
 end
 
--- Start of Undo block
+-- Calculate number of tracks needed
+local span = highestTrackNumber - lowestTrackNumber + 1
+local neededTracks = selectedTrackNumber + (span - 1)
+
+-- Check if enough tracks exist, if not, create more
+local currentTrackCount = getTrackCount()
+if neededTracks > currentTrackCount then
+    local tracksToAdd = neededTracks - currentTrackCount
+    for i = 1, tracksToAdd do
+        insertTrackAtEnd()
+    end
+end
+
+-- Start of Undo block for moving items
 reaper.Undo_BeginBlock()
 
 -- Move items to target track maintaining vertical positioning
@@ -54,8 +82,6 @@ for _, item in ipairs(selectedItems) do
     local track = reaper.GetTrack(0, newTrackNumber)
     if track then
         reaper.MoveMediaItemToTrack(item, track)
-    else
-        reaper.ShowMessageBox("Couldn't find media track for item: " .. tostring(item), "Track not found", 0)
     end
 end
 
@@ -64,4 +90,3 @@ reaper.UpdateArrange()
 
 -- End of Undo block
 reaper.Undo_EndBlock("Move items to selected track maintaining vertical positioning", -1)
-
