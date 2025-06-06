@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="cba87f15711b174981f611ca98d515d0439a0529">
+<index version="1" name="RA-Scripts" commit="4161d4560796b80f55d3bc671215a515862283a3">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -49,6 +49,11 @@
     <reapack name="RA-Align content start to nearest frame.lua" type="script" desc="Align (snap) selected item's content start position to nearest frame.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2025-06-03T16:52:08Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cba87f15711b174981f611ca98d515d0439a0529/RA_Main_Scripts/RA-Align%20content%20start%20to%20nearest%20frame.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Align matching selected item pairs by source name.lua" type="script" desc="Align matching selected item pairs by source name">
+      <version name="1.0" author="MrBrock with AI" time="2025-06-06T15:38:28Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/4161d4560796b80f55d3bc671215a515862283a3/RA_Main_Scripts/RA-Align%20matching%20selected%20item%20pairs%20by%20source%20name.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS.lua" type="script" desc="Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS">
@@ -239,6 +244,11 @@
     <reapack name="RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua" type="script" desc="REPORT Project info to TXT file with parameter value">
       <version name="1.0" author="MrBrock Edit from Reapack script &quot;edgemeal_Save project plugin info to text file.lua&quot; &amp; AI" time="2025-02-12T20:00:33Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/dc936fe645bd78b5713e52258780c89b26dfd96e/RA_Main_Scripts/RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Select items INSIDE TIME SELECTION on SELECTED TRACKS.lua" type="script" desc="Select items fully within time selection on selected tracks (optimized for speed)">
+      <version name="1.0" author="MrBrock with AI" time="2025-06-06T15:38:28Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/4161d4560796b80f55d3bc671215a515862283a3/RA_Main_Scripts/RA-Select%20items%20INSIDE%20TIME%20SELECTION%20on%20SELECTED%20TRACKS.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Select items on selected track exactly at edit Cursor.lua" type="script" desc="Select items on selected track exactly at edit Cursor">
