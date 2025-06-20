@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="02d8219c688a7e9fe5574209dc9aec8e3c350e3c">
+<index version="1" name="RA-Scripts" commit="598bb433610cc377132e4d392eb221582656f4a0">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -272,6 +272,11 @@
       </version>
       <version name="1.1" author="Reservoir Audio / Mr.Brock with AI" time="2025-03-13T17:10:36Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/c15e7cfb2a40315d5aa52ef5b436725178c4a420/RA_Main_Scripts/RA-Set%20EMPTY%20ITEM%20source%20based%20on%20VORDIO%20ITEM%20NOTES%20(relative%20to%20PROJECT%20DIRECTORY).lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Set ITEM POSITION to user defined INTERVALS.lua" type="script" desc="Set ITEM POSITION to user defined INTERVALS (DF/NTSC-aware, no overlap)">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2025-06-20T17:12:37Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/598bb433610cc377132e4d392eb221582656f4a0/RA_Main_Scripts/RA-Set%20ITEM%20POSITION%20to%20user%20defined%20INTERVALS.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Set item start offset relative to cursor distance.lua" type="script" desc="Set item start offset relative to cursor distance.">
