@@ -1,5 +1,8 @@
+-- @version 1.0
+-- @description Set ITEM POSITION to user defined INTERVALS (DF/NTSC-aware, no overlap)
+-- @author RESERVOIR AUDIO / MrBrock, with AI.
+
 --[[
-  Snap Selected Items to N-Second TC Slots (DF/NTSC-aware, no overlap)
   — treating any non-zero frames as +1 sec when ceiling
 --]]
 
