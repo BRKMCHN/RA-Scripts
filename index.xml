@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="e985368df889252310d13b7b0245701f69c968bd">
+<index version="1" name="RA-Scripts" commit="dcdb530bc96ce33c8e4a4ed130595686a90a8551">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -292,6 +292,11 @@
     <reapack name="RA-Set Selection of all group items to OFF.lua" type="script" desc="Set linked selection of all group items to OFF">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2024-02-28T21:51:48Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7baa282d4e30f0fab6f0adf8c2a7ac9848217556/RA_Main_Scripts/RA-Set%20Selection%20of%20all%20group%20items%20to%20OFF.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Set space between selected ITEMS preserving GROUPED item positions.lua" type="script" desc="Set space between selected ITEMS preserving GROUPED item positions">
+      <version name="1.0" author="Reservoir Audio / MrBrock with AI" time="2025-06-23T17:17:09Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/dcdb530bc96ce33c8e4a4ed130595686a90a8551/RA_Main_Scripts/RA-Set%20space%20between%20selected%20ITEMS%20preserving%20GROUPED%20item%20positions.lua</source>
       </version>
     </reapack>
     <reapack name="RA-SET time selection to the selected item without moving edit cursor.lua" type="script" desc="SET time selection to the selected item without moving edit cursor.">
