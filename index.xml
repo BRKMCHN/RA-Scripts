@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="598bb433610cc377132e4d392eb221582656f4a0">
+<index version="1" name="RA-Scripts" commit="e985368df889252310d13b7b0245701f69c968bd">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -392,6 +392,13 @@
       </metadata>
       <version name="1.0" author="Reservoir Audio / Amel with AI" time="2025-03-12T19:08:43Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/f26e5f9f572ec480a388f9d6ba4520df5cad81d7/RA_Main_Scripts/RA_SET_SPACE_BETWEEN_SELECTED_ITEMS.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <category name="TC MEDIA">
+    <reapack name="RA_TC set REGION bounds to defined FORMAT based on selected items.lua" type="script" desc="TC set Region bounds to defined FORMAT based on selected items (0.5s lead in - 1s lead out)">
+      <version name="1.0" author="RESERVOIR AUDIO / Fante + AI" time="2025-06-23T16:41:17Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/e985368df889252310d13b7b0245701f69c968bd/TC%20MEDIA/RA_TC%20set%20REGION%20bounds%20to%20defined%20FORMAT%20based%20on%20selected%20items.lua</source>
       </version>
     </reapack>
   </category>
