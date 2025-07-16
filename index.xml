@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="dcdb530bc96ce33c8e4a4ed130595686a90a8551">
+<index version="1" name="RA-Scripts" commit="05af7d1fb16e16afc169f409151e6ab5b1a3901c">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -378,6 +378,11 @@
       </version>
       <version name="1.1" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-07-09T16:10:02Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a28fbb0d081a11ac59c9f5af18231eeac05bcb67/RA_Main_Scripts/RA-Unspread_to_2_tracks_for_Align.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA_Open_items_in_external_editor_SAFETY_PROMPT.lua" type="script" desc="Open items in external editor (Safe Wrapper for timestamp_EDIT tagged files)">
+      <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2025-07-16T21:15:52Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/05af7d1fb16e16afc169f409151e6ab5b1a3901c/RA_Main_Scripts/RA_Open_items_in_external_editor_SAFETY_PROMPT.lua</source>
       </version>
     </reapack>
     <reapack name="RA_SELECT_FROM_SAME_SOURCE_TIME_SELECTION.lua" type="script" desc="SELECT ITEMS WITH SAME SOURCE AS FIRST SELECTED ITEM -- WITHIN TIME SELECTION">
