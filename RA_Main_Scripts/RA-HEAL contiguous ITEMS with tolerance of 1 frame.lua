@@ -4,6 +4,11 @@
 
 reaper.Undo_BeginBlock()
 
+local originallySelectedItems = {}
+for i = 0, reaper.CountSelectedMediaItems(0) - 1 do
+    table.insert(originallySelectedItems, reaper.GetSelectedMediaItem(0, i))
+end
+
 local frameRate = reaper.TimeMap_curFrameRate(0)
 local frameDuration = 1 / frameRate
 local tolerance = frameDuration + 0.000001
@@ -67,6 +72,13 @@ for _, group in ipairs(chunks) do
         reaper.SetMediaItemSelected(entry.item, true)
     end
     reaper.Main_OnCommand(40548, 0) -- Heal splits in items (preserve timing)
+end
+
+reaper.Main_OnCommand(40289, 0) -- Unselect all
+for _, item in ipairs(originallySelectedItems) do
+    if reaper.ValidatePtr(item, "MediaItem*") then
+        reaper.SetMediaItemSelected(item, true)
+    end
 end
 
 reaper.UpdateArrange()
