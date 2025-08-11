@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="f57e95dd208bae376239b776200f79b6cc4dafce">
+<index version="1" name="RA-Scripts" commit="742b8e941382c2ae4df1453bf76e81af265fd226">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -56,6 +56,11 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/4161d4560796b80f55d3bc671215a515862283a3/RA_Main_Scripts/RA-Align%20matching%20selected%20item%20pairs%20by%20source%20name.lua</source>
       </version>
     </reapack>
+    <reapack name="RA-Alternate_same_source_items_between_2_or_3_tracks.lua" type="script" desc="Alternate same source items between 2 or 3 tracks">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2025-08-11T21:21:56Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/742b8e941382c2ae4df1453bf76e81af265fd226/RA_Main_Scripts/RA-Alternate_same_source_items_between_2_or_3_tracks.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS.lua" type="script" desc="Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-04-19T21:27:15Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/06f55c3ca045e25b449fbe4e6d770a43f2573274/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
@@ -110,7 +115,7 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/02d8219c688a7e9fe5574209dc9aec8e3c350e3c/RA_Main_Scripts/RA-Group%20selected%20items%20with%20same%20name.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-GUEST_Show_Available_Shortcuts.lua" type="script" desc="Unspread items on temporary tracks back to its place.">
+    <reapack name="RA-GUEST_Show_Available_Shortcuts.lua" type="script" desc="Show available shortcuts.">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
@@ -122,6 +127,9 @@
       </metadata>
       <version name="1.0" author="Eric Tetz - see &quot;https://github.com/EricTetz/reaper&quot;" time="2025-04-02T18:11:41Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/3cb908fec28a16134016b804b519d0c73f019cec/RA_Main_Scripts/RA-GUEST_Show_Available_Shortcuts.lua</source>
+      </version>
+      <version name="1.1" author="Eric Tetz - see &quot;https://github.com/EricTetz/reaper&quot; updated with AI" time="2025-08-11T21:21:56Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/742b8e941382c2ae4df1453bf76e81af265fd226/RA_Main_Scripts/RA-GUEST_Show_Available_Shortcuts.lua</source>
       </version>
     </reapack>
     <reapack name="RA-HEAL contiguous ITEMS with tolerance of 1 frame.lua" type="script" desc="HEAL contiguous items (with a tolerance of 1 frame)">
