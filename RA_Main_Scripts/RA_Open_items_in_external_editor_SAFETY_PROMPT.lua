@@ -1,5 +1,5 @@
 -- @description Open items in external editor (Safe Wrapper for timestamp_EDIT tagged files)
--- @version 1.0
+-- @version 1.1
 -- @author Reservoir Audio / Mr.Brock with AI
 
 -- Function to check if any selected item uses a source file that is not clearly a copied/edit version
@@ -29,7 +29,7 @@ local function main()
 
     if has_potential_original_sources() then
         local ret = reaper.ShowMessageBox(
-            "You are about to open a file that may be an original source file.\n\n[timestamp]_EDIT tag was found in source name.\n\nWould you like to proceed anyway?",
+            "You are about to open a file that may be an original source file.\n\n[timestamp]_EDIT tag was not found in source name.\n\nWould you like to proceed anyway?",
             "Potential Original Source File Detected",
             1 -- 0=OK, 1=Yes/No, 2=Yes/No/Cancel
         )
