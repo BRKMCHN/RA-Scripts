@@ -1,4 +1,4 @@
--- @version 1.0
+-- @version 1.1
 -- @description Rapport de musique à la Réservoir Audio
 -- @author RESERVOIR AUDIO / MrBrock & AI
 
@@ -17,6 +17,19 @@ Behavior:
 local function msg(s) reaper.ShowMessageBox(s, "Export CSV", 0) end
 
 -- ---------- utilities ----------
+
+-- Prompt: merge/name by TAKE? (Yes = take, No = source, Cancel = abort)
+local function ask_merge_mode()
+  -- 3 = Yes/No/Cancel
+  local ret = reaper.ShowMessageBox(
+    "Utiliser TAKE name ou SOURCE name pour l'export ?\n\nOui = Take name\nNon = Source (fichier)\nAnnuler = Quitter",
+    "Mode de regroupement",
+    3
+  )
+  if ret == 2 then return nil end   -- Cancel
+  return ret == 6                   -- Yes => take names; No => source names
+end
+
 local function path_basename_no_ext(path)
   if not path or path == "" then return "" end
   path = path:gsub("[/\\]+$", "")
@@ -166,6 +179,7 @@ local function collect_segments_by_region()
           local take = reaper.GetActiveTake(it)
           if take then
             local name_basename, src_key = take_display_name(take)
+            local take_nm = reaper.GetTakeName(take) or ""
             if name_basename ~= "" then
               local pos = reaper.GetMediaItemInfo_Value(it, "D_POSITION")
               local len = reaper.GetMediaItemInfo_Value(it, "D_LENGTH")
@@ -178,6 +192,7 @@ local function collect_segments_by_region()
                   table.insert(segs_by_region[ri], {
                     src_key   = src_key,
                     src_name  = name_basename,
+                    take_name = take_nm,
                     s         = s,
                     e         = e
                   })
@@ -193,22 +208,46 @@ local function collect_segments_by_region()
   return regions, segs_by_region
 end
 
--- ---------- merge by source within each region ----------
-local GAP_TOLERANCE_SECONDS = 5.0 / 24.0 -- fixed tolerance
+-- Merge by either SOURCE or TAKE name (gap tolerance applies within each key)
+-- use_take_names = true  -> key = take name (fallback to source if take empty)
+-- use_take_names = false -> key = source file
 
-local function merge_by_source(segments)
+-- Gap tolerance: 5 frames @ 24 fps
+local GAP_TOLERANCE_SECONDS = 5.0 / 24.0
+
+local function merge_by_key(segments, use_take_names)
   local buckets = {}
-  for _, seg in ipairs(segments) do
-    local b = buckets[seg.src_key]
-    if not b then b = {}; buckets[seg.src_key] = b end
-    table.insert(b, { s = seg.s, e = seg.e, src_name = seg.src_name, src_key = seg.src_key })
+
+  local function make_key(seg)
+    if use_take_names then
+      if seg.take_name and seg.take_name ~= "" then
+        return "TAKE::" .. seg.take_name, (seg.take_name or "")
+      else
+        -- empty take names: keep isolated per source (don't blend across files)
+        return "SRC::" .. (seg.src_key or ""), (seg.src_name or "")
+      end
+    else
+      return "SRC::" .. (seg.src_key or ""), (seg.src_name or "")
+    end
   end
 
+  -- bucket by chosen key
+  for _, seg in ipairs(segments) do
+    local key, display = make_key(seg)
+    local b = buckets[key]
+    if not b then
+      b = { display_name = display, list = {} }
+      buckets[key] = b
+    end
+    table.insert(b.list, seg)
+  end
+
+  -- merge within each bucket
   local merged = {}
-  for src_key, list in pairs(buckets) do
+  for _, pack in pairs(buckets) do
+    local list = pack.list
     table.sort(list, function(a,b) return a.s < b.s end)
     local cur_s, cur_e = nil, nil
-    local src_name = list[1].src_name
     for _, seg in ipairs(list) do
       if not cur_s then
         cur_s, cur_e = seg.s, seg.e
@@ -216,13 +255,13 @@ local function merge_by_source(segments)
         if seg.s <= (cur_e + GAP_TOLERANCE_SECONDS) then
           if seg.e > cur_e then cur_e = seg.e end
         else
-          table.insert(merged, { src_name = src_name, src_key = src_key, s = cur_s, e = cur_e })
+          table.insert(merged, { s = cur_s, e = cur_e, display_name = pack.display_name })
           cur_s, cur_e = seg.s, seg.e
         end
       end
     end
     if cur_s then
-      table.insert(merged, { src_name = src_name, src_key = src_key, s = cur_s, e = cur_e })
+      table.insert(merged, { s = cur_s, e = cur_e, display_name = pack.display_name })
     end
   end
 
@@ -231,7 +270,7 @@ local function merge_by_source(segments)
 end
 
 -- ---------- build rows with OFFSET to first region start ----------
-local function to_rows_with_offset(regions, segs_by_region)
+local function to_rows_with_offset(regions, segs_by_region, use_take_names)
   local fps = get_project_fps()
   local rows = {}
   -- Anchor: first region's **seconds** (not frames)
@@ -257,7 +296,7 @@ local function to_rows_with_offset(regions, segs_by_region)
     
 
     -- MUSIC BLOCKS (merge within region, then offset each block into the base anchor)
-    local merged = merge_by_source(segs_by_region[ri])
+    local merged = merge_by_key(segs_by_region[ri], use_take_names)
     for _, m in ipairs(merged) do
       local s_rel = math.max(0, m.s - region.start)
       local e_rel = math.max(0, m.e - region.start)
@@ -272,7 +311,7 @@ local function to_rows_with_offset(regions, segs_by_region)
       local durF  = math.max(0, eF - sF)
     
       table.insert(rows, {
-        nom          = m.src_name or "",
+        nom          = m.display_name or "",
         debut_tc     = fmt_tc(s_adj),
         fin_tc       = fmt_tc(e_adj),
         duree_tc     = fmt_len(durF / fps),
@@ -376,7 +415,14 @@ if not regions then
   return
 end
 
-local rows, fps = to_rows_with_offset(regions, segs_by_region)
+local use_take_names = ask_merge_mode()
+if use_take_names == nil then
+  reaper.PreventUIRefresh(-1)
+  reaper.Undo_EndBlock("Export CSV (annulé par l’utilisateur)", -1)
+  return
+end
+
+local rows, fps = to_rows_with_offset(regions, segs_by_region, use_take_names)
 local function default_csv_name()
   local _, proj_fn = reaper.EnumProjects(-1, "")
   if proj_fn and proj_fn ~= "" then
@@ -399,9 +445,8 @@ local success, err = write_csv(rows, out_path)
 reaper.PreventUIRefresh(-1)
 if success then
   reaper.Undo_EndBlock("Export CSV (offset by first region)", -1)
-  msg(string.format("CSV écrit vers:\n%s\n\nLignes: %d\nFPS projet: %.3f", out_path, #rows, fps))
+  msg(string.format("CSV exporté:\n%s\n\nLignes: %d\nFPS projet: %.3f", out_path, #rows, fps))
 else
   reaper.Undo_EndBlock("Export CSV (offset by first region) [FAILED]", -1)
-  msg("Erreur d’écriture CSV: " .. tostring(err))
+  msg("Erreur d’export CSV: " .. tostring(err))
 end
-
