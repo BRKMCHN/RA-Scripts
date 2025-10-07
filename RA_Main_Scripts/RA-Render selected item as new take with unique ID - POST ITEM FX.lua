@@ -1,5 +1,5 @@
 -- @description RA-Render selected item as new take with unique ID - POST ITEM FX
--- @version 1.0
+-- @version 1.1
 -- @author
 --   RESERVOIR AUDIO / MrBrock & AI
 

@@ -1,5 +1,5 @@
 -- @description Render selected item as new take with unique ID - PRE ITEM FX - Set for RA auto align
--- @version 1.0
+-- @version 1.1
 -- @author
 --   RESERVOIR AUDIO / MrBrock with AI
 
