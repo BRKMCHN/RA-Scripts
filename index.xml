@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="193a92eb4dac95c43f6237ed58fb6569346d3199">
+<index version="1" name="RA-Scripts" commit="a082cd1abf94e468bcf50d64133c7ee397c1488b">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -272,19 +272,19 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/df22ac560454f8b1e73885055bb08c568ddc4fff/RA_Main_Scripts/RA-Rename%20Items%20based%20on%20Parent%20Source%20File%20Name.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Render as new take &amp; rename sources with unique identifier (ALIGN PROXY VERSION).lua" type="script" desc="Render as new take &amp; rename sources with unique identifier (dedicated ALIGN PROXY VERSION)">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2025-09-12T19:31:18Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/193a92eb4dac95c43f6237ed58fb6569346d3199/RA_Main_Scripts/RA-Render%20as%20new%20take%20&amp;%20rename%20sources%20with%20unique%20identifier%20(ALIGN%20PROXY%20VERSION).lua</source>
+    <reapack name="RA-Render selected item as new take with unique ID - POST ITEM FX.lua" type="script" desc="RA-Render selected item as new take with unique ID - POST ITEM FX">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2025-10-07T14:02:55Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a082cd1abf94e468bcf50d64133c7ee397c1488b/RA_Main_Scripts/RA-Render%20selected%20item%20as%20new%20take%20with%20unique%20ID%20-%20POST%20ITEM%20FX.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Render as new take &amp; rename sources with unique identifier (ALIGN VERSION).lua" type="script" desc="Render as new take &amp; rename sources with unique identifier (dedicated ALIGN PROXY VERSION)">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2025-09-12T19:31:18Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/193a92eb4dac95c43f6237ed58fb6569346d3199/RA_Main_Scripts/RA-Render%20as%20new%20take%20&amp;%20rename%20sources%20with%20unique%20identifier%20(ALIGN%20VERSION).lua</source>
+    <reapack name="RA-Render selected item as new take with unique ID - PRE ITEM FX - ALIGN.lua" type="script" desc="Render selected item as new take with unique ID - PRE ITEM FX - Set for RA auto align">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-10-07T14:02:55Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a082cd1abf94e468bcf50d64133c7ee397c1488b/RA_Main_Scripts/RA-Render%20selected%20item%20as%20new%20take%20with%20unique%20ID%20-%20PRE%20ITEM%20FX%20-%20ALIGN.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Render as new take &amp; rename sources with unique identifier.lua" type="script" desc="Render as new take &amp; rename sources with unique identifier (dedicated ALIGN PROXY VERSION)">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2025-09-12T19:31:18Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/193a92eb4dac95c43f6237ed58fb6569346d3199/RA_Main_Scripts/RA-Render%20as%20new%20take%20&amp;%20rename%20sources%20with%20unique%20identifier.lua</source>
+    <reapack name="RA-Render selected item as new take with unique ID - PRE ITEM FX.lua.lua" type="script" desc="Render selected item as new take with unique ID - PRE ITEM FX">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-10-07T14:02:55Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a082cd1abf94e468bcf50d64133c7ee397c1488b/RA_Main_Scripts/RA-Render%20selected%20item%20as%20new%20take%20with%20unique%20ID%20-%20PRE%20ITEM%20FX.lua.lua</source>
       </version>
     </reapack>
     <reapack name="RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua" type="script" desc="REPORT Project info to TXT file with parameter value">
