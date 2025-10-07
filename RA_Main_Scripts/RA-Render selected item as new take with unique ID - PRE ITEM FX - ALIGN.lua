@@ -20,6 +20,7 @@ local DEBUG                 = false     -- set true for console logs
 ---------------------------------------
 local ACTION_DUPLICATE_ACTIVE_TAKE     = 40639  -- Take: Duplicate active take
 local CMD_MOVE_TAKE_ENV_WITH_CONTENTS  = 43636  -- Options: Move take envelope points when moving media item contents
+local CMD_TOGGLE_ITEM_GROUPING = 1156   -- Options: Toggle item grouping enabled
 
 ---------------------------------------
 -- Debug helper
@@ -361,6 +362,10 @@ if sel_count == 0 then
   return
 end
 
+-- Item grouping wrapper (disable only if currently enabled)
+local _orig_grouping = (reaper.GetToggleCommandStateEx(0, CMD_TOGGLE_ITEM_GROUPING) == 1)
+if _orig_grouping then reaper.Main_OnCommand(CMD_TOGGLE_ITEM_GROUPING, 0) end
+
 -- Snapshot before duplication (so we can grab the new duplicate takes)
 local function snapshot_selected_items()
   local snap = {}
@@ -415,6 +420,9 @@ end
 
 -- Restore the option
 if orig_move_state == true then set_toggle_state(CMD_MOVE_TAKE_ENV_WITH_CONTENTS, true) end
+
+-- Restore item grouping if we disabled it
+if _orig_grouping then reaper.Main_OnCommand(CMD_TOGGLE_ITEM_GROUPING, 0) end
 
 if FORCE_REBUILD_PEAKS and sel_count > 0 then
   reaper.Main_OnCommand(40441, 0) -- Rebuild peaks

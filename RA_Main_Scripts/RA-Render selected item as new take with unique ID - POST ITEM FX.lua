@@ -22,6 +22,7 @@ local TAIL_SECONDS          = 0.0       -- extend read window for FX tails
 -- Command IDs
 ---------------------------------------
 local CMD_MOVE_TAKE_ENV_WITH_CONTENTS  = 43636
+local CMD_TOGGLE_ITEM_GROUPING = 1156   -- Options: Toggle item grouping enabled
 
 ---------------------------------------
 -- Debug helper
@@ -219,6 +220,10 @@ if #sel_items == 0 then
   return
 end
 
+-- Item grouping wrapper (disable only if currently enabled)
+local _orig_grouping = (reaper.GetToggleCommandStateEx(0, CMD_TOGGLE_ITEM_GROUPING) == 1)
+if _orig_grouping then reaper.Main_OnCommand(CMD_TOGGLE_ITEM_GROUPING, 0) end
+
 -- Disable “move take env points with contents”
 local orig_move = (reaper.GetToggleCommandStateEx(0, CMD_MOVE_TAKE_ENV_WITH_CONTENTS) == 1)
 if orig_move then reaper.Main_OnCommand(CMD_MOVE_TAKE_ENV_WITH_CONTENTS, 0) end
@@ -291,6 +296,10 @@ end
 
 delete_track(tmp_tr)
 if orig_move then reaper.Main_OnCommand(CMD_MOVE_TAKE_ENV_WITH_CONTENTS, 0) end
+
+-- Restore item grouping if we disabled it
+if _orig_grouping then reaper.Main_OnCommand(CMD_TOGGLE_ITEM_GROUPING, 0) end
+
 if FORCE_REBUILD_PEAKS and #sel_items > 0 then reaper.Main_OnCommand(40441, 0) end
 restore_selected_items(sel_items)
 reaper.PreventUIRefresh(-1)
