@@ -260,6 +260,9 @@ for i, orig_it in ipairs(sel_items) do
           reaper.SetMediaItemTakeInfo_Value(tmp_take, "I_CHANMODE", temp_mode)
         end
 
+      -- Sanitize ONLY ITEM GAIN on the temp clone (keep fades etc. intact)
+      reaper.SetMediaItemInfo_Value(tmp_item, "D_VOL", 1.0)  -- 1.0 = 0 dB
+
         local out_path = build_outpath_with_ra_ofn(orig_it, sPath)
         local _, out_stem = split_path(out_path)
 
