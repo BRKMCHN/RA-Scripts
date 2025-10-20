@@ -1,5 +1,5 @@
 -- @description RA-Render selected item as new take with unique ID - POST ITEM FX
--- @version 1.2
+-- @version 1.3
 -- @author
 --   RESERVOIR AUDIO / MrBrock & AI
 
@@ -13,7 +13,6 @@
 local TAG_SUFFIX            = "_EDIT"
 local BLOCK_SAMPLES         = 65536
 local SET_TAKE_NAME         = true
-local FORCE_REBUILD_PEAKS   = true
 local DEBUG                 = false
 local TMP_TRACK_NAME        = "__RA_TMP_POSTFX"
 local TAIL_SECONDS          = 0.0       -- extend read window for FX tails
@@ -303,7 +302,8 @@ if orig_move then reaper.Main_OnCommand(CMD_MOVE_TAKE_ENV_WITH_CONTENTS, 0) end
 -- Restore item grouping if we disabled it
 if _orig_grouping then reaper.Main_OnCommand(CMD_TOGGLE_ITEM_GROUPING, 0) end
 
-if FORCE_REBUILD_PEAKS and #sel_items > 0 then reaper.Main_OnCommand(40441, 0) end
+reaper.Main_OnCommand(40047, 0) -- Build any missing peaks
+
 restore_selected_items(sel_items)
 reaper.PreventUIRefresh(-1)
 reaper.Undo_EndBlock("Post-Item-FX render (per-item, channel policy) → NEW takes (RA_OFN naming)", -1)

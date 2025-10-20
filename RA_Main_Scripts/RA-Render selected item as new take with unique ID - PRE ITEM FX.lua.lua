@@ -1,5 +1,5 @@
 -- @description Render selected item as new take with unique ID - PRE ITEM FX
--- @version 1.1
+-- @version 1.2
 -- @author
 --   RESERVOIR AUDIO / MrBrock with AI
 
@@ -12,7 +12,6 @@
 local TAG_SUFFIX            = "_EDIT"   -- tag appended to new file stem
 local BLOCK_SAMPLES         = 65536     -- accessor read block (per channel)
 local SET_TAKE_NAME         = true      -- set take display name to file stem
-local FORCE_REBUILD_PEAKS   = true      -- rebuild peaks at end
 local DEBUG                 = false     -- set true for console logs
 
 ---------------------------------------
@@ -424,9 +423,7 @@ if orig_move_state == true then set_toggle_state(CMD_MOVE_TAKE_ENV_WITH_CONTENTS
 -- Restore item grouping if we disabled it
 if _orig_grouping then reaper.Main_OnCommand(CMD_TOGGLE_ITEM_GROUPING, 0) end
 
-if FORCE_REBUILD_PEAKS and sel_count > 0 then
-  reaper.Main_OnCommand(40441, 0) -- Rebuild peaks
-end
+reaper.Main_OnCommand(40047, 0) -- Build any missing peaks
 
 reaper.PreventUIRefresh(-1)
 reaper.Undo_EndBlock("Dup active take → Render (RAW @ source SR, sample-aligned) → Replace duplicate; neutralize timing; RA_OFN naming; no FX", -1)
