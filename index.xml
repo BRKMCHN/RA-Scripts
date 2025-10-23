@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="f8791d9c7f8112aec8c895eefe8a48ba501712f2">
+<index version="1" name="RA-Scripts" commit="74617aa3d5fbc1f2d5abcfd44e0c79a05a5a1177">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -236,9 +236,12 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/d1ed4194fe2fb0d2290f771eaf796b55c11085d6/RA_Main_Scripts/RA-Move%20selected%20items%20to%20first%20selected%20track%20within%20overlap%20threshold.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Open item copies into external editor_DEFER_UNIQUE ID.lua" type="script" desc="Open item copies in external editor - DEFER &amp; Unique ID">
+    <reapack name="RA-Open item copies into external editor_DEFER_UNIQUE ID.lua" type="script" desc="RA-Open item copies in external editor - DEFER &amp; Unique ID">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2025-10-23T16:08:12Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/f8791d9c7f8112aec8c895eefe8a48ba501712f2/RA_Main_Scripts/RA-Open%20item%20copies%20into%20external%20editor_DEFER_UNIQUE%20ID.lua</source>
+      </version>
+      <version name="1.1" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2025-10-23T16:16:37Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/74617aa3d5fbc1f2d5abcfd44e0c79a05a5a1177/RA_Main_Scripts/RA-Open%20item%20copies%20into%20external%20editor_DEFER_UNIQUE%20ID.lua</source>
       </version>
     </reapack>
     <reapack name="RA-RAPPORT_MUSIQUE_RA.lua" type="script" desc="Rapport de musique à la Réservoir Audio">
