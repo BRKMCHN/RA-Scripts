@@ -1,5 +1,5 @@
--- @version 1.0
--- @description Open item copies in external editor - DEFER & Unique ID
+-- @version 1.1
+-- @description RA-Open item copies in external editor - DEFER & Unique ID
 -- @author RESERVOIR AUDIO / MrBrock adapted with AI.
 
 -- Will perform pre built script to render as new take PRE FX then will defer opening items in external editor to prevent the refresh fail upon returning to reaper.
