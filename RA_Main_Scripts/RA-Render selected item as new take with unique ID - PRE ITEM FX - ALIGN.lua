@@ -423,7 +423,7 @@ if orig_move_state == true then set_toggle_state(CMD_MOVE_TAKE_ENV_WITH_CONTENTS
 -- Restore item grouping if we disabled it
 if _orig_grouping then reaper.Main_OnCommand(CMD_TOGGLE_ITEM_GROUPING, 0) end
 
-reaper.Main_OnCommand(40047, 0) -- Build any missing peaks
+reaper.Main_OnCommand(40245, 0) -- Build any missing peaks
 
 reaper.PreventUIRefresh(-1)
 reaper.Undo_EndBlock("Dup active take → Render (RAW @ source SR, sample-aligned) → Replace duplicate; neutralize timing; RA_OFN naming; no FX", -1)

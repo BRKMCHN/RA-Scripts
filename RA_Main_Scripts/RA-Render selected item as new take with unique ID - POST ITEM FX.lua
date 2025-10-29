@@ -302,7 +302,7 @@ if orig_move then reaper.Main_OnCommand(CMD_MOVE_TAKE_ENV_WITH_CONTENTS, 0) end
 -- Restore item grouping if we disabled it
 if _orig_grouping then reaper.Main_OnCommand(CMD_TOGGLE_ITEM_GROUPING, 0) end
 
-reaper.Main_OnCommand(40047, 0) -- Build any missing peaks
+reaper.Main_OnCommand(40245, 0) -- Build any missing peaks
 
 restore_selected_items(sel_items)
 reaper.PreventUIRefresh(-1)
