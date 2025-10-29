@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="82385ea0fc1958c55a9228600d13de5e596c27eb">
+<index version="1" name="RA-Scripts" commit="7f3c81f51250fd851a42cd60ed1bab73f9951dc9">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -236,11 +236,6 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/d1ed4194fe2fb0d2290f771eaf796b55c11085d6/RA_Main_Scripts/RA-Move%20selected%20items%20to%20first%20selected%20track%20within%20overlap%20threshold.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Open item copies in external editor_DEFER_UNIQUE_ID.lua" type="script" desc="Open item copies in external editor - DEFER &amp; Unique ID">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2025-10-24T19:43:57Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/82385ea0fc1958c55a9228600d13de5e596c27eb/RA_Main_Scripts/RA-Open%20item%20copies%20in%20external%20editor_DEFER_UNIQUE_ID.lua</source>
-      </version>
-    </reapack>
     <reapack name="RA-RAPPORT_MUSIQUE_RA.lua" type="script" desc="Rapport de musique à la Réservoir Audio">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2025-08-12T18:58:55Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/520e5e838fbf22b4a0345a90ef91fa419052e5ec/RA_Main_Scripts/RA-RAPPORT_MUSIQUE_RA.lua</source>
@@ -302,15 +297,9 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a92abf71f1cf87670d1e95881436eb4a2a725247/RA_Main_Scripts/RA-Render%20selected%20item%20as%20new%20take%20with%20unique%20ID%20-%20PRE%20ITEM%20FX%20-%20ALIGN.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Render selected item as new take with unique ID - PRE ITEM FX.lua.lua" type="script" desc="Render selected item as new take with unique ID - PRE ITEM FX">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-10-07T14:02:55Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a082cd1abf94e468bcf50d64133c7ee397c1488b/RA_Main_Scripts/RA-Render%20selected%20item%20as%20new%20take%20with%20unique%20ID%20-%20PRE%20ITEM%20FX.lua.lua</source>
-      </version>
-      <version name="1.1" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-10-07T15:15:16Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/42af8ede643ad1ba2d402a32727818290ab016c3/RA_Main_Scripts/RA-Render%20selected%20item%20as%20new%20take%20with%20unique%20ID%20-%20PRE%20ITEM%20FX.lua.lua</source>
-      </version>
-      <version name="1.2" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-10-20T21:06:05Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a92abf71f1cf87670d1e95881436eb4a2a725247/RA_Main_Scripts/RA-Render%20selected%20item%20as%20new%20take%20with%20unique%20ID%20-%20PRE%20ITEM%20FX.lua.lua</source>
+    <reapack name="RA-Render selected item as new take with unique ID - PRE ITEM FX.lua" type="script" desc="Render selected item as new take with unique ID - PRE ITEM FX">
+      <version name="1.3" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-10-29T14:16:25Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/7f3c81f51250fd851a42cd60ed1bab73f9951dc9/RA_Main_Scripts/RA-Render%20selected%20item%20as%20new%20take%20with%20unique%20ID%20-%20PRE%20ITEM%20FX.lua</source>
       </version>
     </reapack>
     <reapack name="RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua" type="script" desc="REPORT Project info to TXT file with parameter value">
