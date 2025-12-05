@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="89e943d8ca45f86315345b9b2d6a4ece73d40d30">
+<index version="1" name="RA-Scripts" commit="a802cba48bc5bb65760bd8b3aa49bc1169f2c52c">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -61,6 +61,24 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/742b8e941382c2ae4df1453bf76e81af265fd226/RA_Main_Scripts/RA-Alternate_same_source_items_between_2_or_3_tracks.lua</source>
       </version>
     </reapack>
+    <reapack name="RA-Append_selected_item_channel_mode_to_take_name.lua" type="script" desc="Append item channel mode to take name as _CH-#">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 For each selected item:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Reads active take's channel mode (I_CHANMODE)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Infers which source channel(s) are used\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Appends "_CH-x" or "_CH-x-y" to the take name\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Replaces any existing _CH-# or _CH-#-# suffix\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2025-12-05T16:50:18Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a802cba48bc5bb65760bd8b3aa49bc1169f2c52c/RA_Main_Scripts/RA-Append_selected_item_channel_mode_to_take_name.lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS.lua" type="script" desc="Copy &amp; Replace FULL SOURCE File for SELECTED ITEMS">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-04-19T21:27:15Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/06f55c3ca045e25b449fbe4e6d770a43f2573274/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
@@ -76,6 +94,9 @@
       </version>
       <version name="2.1" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2024-09-06T16:02:58Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/90b1515929613d2e81b2771d4b40b532d345a5f0/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
+      </version>
+      <version name="3.0" author="RESERVOIR AUDIO / MrBrock &amp; AI" time="2025-12-05T16:50:18Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a802cba48bc5bb65760bd8b3aa49bc1169f2c52c/RA_Main_Scripts/RA-Copy%20&amp;%20Replace%20FULL%20SOURCE%20File%20for%20SELECTED%20ITEMS.lua</source>
       </version>
     </reapack>
     <reapack name="RA-CROP ITEMS to REGION BOUNDS of same color as track.lua" type="script" desc="Crop items to region bounds of same color as track.">
@@ -211,6 +232,23 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/bd03caad284d16ddfecf813dc80c7c51a8190daa/RA_Main_Scripts/RA-Keep_selected_items_looped_longer_than_source.lua</source>
       </version>
     </reapack>
+    <reapack name="RA-Log_original_take_name_to_selected_item_notes(AAF).lua" type="script" desc="Log original take name to selected item notes (AAF))">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 For each selected item:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Reads the active take name\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Adds or updates a line in item notes: "RA_OTN_AAF: "\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If any selected item already has an RA_OTN_AAF line, the user is prompted once to confirm overwriting previously logged names. Cancel stops the entire process.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-12-05T16:50:18Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a802cba48bc5bb65760bd8b3aa49bc1169f2c52c/RA_Main_Scripts/RA-Log_original_take_name_to_selected_item_notes(AAF).lua</source>
+      </version>
+    </reapack>
     <reapack name="RA-Markers at item edges without overlap.lua" type="script" desc="Create MARKERS at edges of selected items, skipping item edges that overlap with others.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf5634409bd49a60a57d5f9a833bf33272d40ec8/RA_Main_Scripts/RA-Markers%20at%20item%20edges%20without%20overlap.lua</source>
@@ -313,6 +351,26 @@
     <reapack name="RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua" type="script" desc="REPORT Project info to TXT file with parameter value">
       <version name="1.0" author="MrBrock Edit from Reapack script &quot;edgemeal_Save project plugin info to text file.lua&quot; &amp; AI" time="2025-02-12T20:00:33Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/dc936fe645bd78b5713e52258780c89b26dfd96e/RA_Main_Scripts/RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Restore a copy &amp; replace source to original (RA_OFP tag).lua" type="script" desc="Restore a copy &amp; replace source to original (RA_OFP tag)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 For each selected item:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Reads RA_OFP: from item notes (original file path, usually relative to project)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Resolves it under the current project directory\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab If not found, optionally searches by filename anywhere under the project dir\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Replaces take source with the found original file (no new PCM file created)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Removes trailing "\u55357 ?\u56637 ?" from take name\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Strips the RA_OFP: line from notes\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-12-05T16:50:18Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a802cba48bc5bb65760bd8b3aa49bc1169f2c52c/RA_Main_Scripts/RA-Restore%20a%20copy%20&amp;%20replace%20source%20to%20original%20(RA_OFP%20tag).lua</source>
       </version>
     </reapack>
     <reapack name="RA-Select items INSIDE TIME SELECTION on SELECTED TRACKS.lua" type="script" desc="Select items fully within time selection on selected tracks (optimized for speed)">
