@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="a802cba48bc5bb65760bd8b3aa49bc1169f2c52c">
+<index version="1" name="RA-Scripts" commit="99d00b565c980ade88f9bbe3a1f052dca3b18150">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -371,6 +371,11 @@
       </metadata>
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock with AI" time="2025-12-05T16:50:18Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/a802cba48bc5bb65760bd8b3aa49bc1169f2c52c/RA_Main_Scripts/RA-Restore%20a%20copy%20&amp;%20replace%20source%20to%20original%20(RA_OFP%20tag).lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Scale start offset of selected takes based on FPS ratio.lua" type="script" desc="Scale start offset of selected takes based on FPS ratio">
+      <version name="1.0" author="Réservoir Audio / Fante with AI" time="2025-12-11T17:57:33Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/99d00b565c980ade88f9bbe3a1f052dca3b18150/RA_Main_Scripts/RA-Scale%20start%20offset%20of%20selected%20takes%20based%20on%20FPS%20ratio.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Select items INSIDE TIME SELECTION on SELECTED TRACKS.lua" type="script" desc="Select items fully within time selection on selected tracks (optimized for speed)">
