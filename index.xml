@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="99d00b565c980ade88f9bbe3a1f052dca3b18150">
+<index version="1" name="RA-Scripts" commit="29e4c4d7fb2bb7734a48f54e3003e4e49af5b1e1">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -409,6 +409,11 @@
     <reapack name="RA-Set selected envelope point to previous point value.lua" type="script" desc="SET selected envelope points to PREVIOUS envelope point value.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2023-11-07T21:18:09Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/cf5634409bd49a60a57d5f9a833bf33272d40ec8/RA_Main_Scripts/RA-Set%20selected%20envelope%20point%20to%20previous%20point%20value.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Set selected items nearest edges to 1 frame distance from edit cursor.lua" type="script" desc="Set selected items nearest edges to 1 frame distance from edit cursor">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-01-08T22:58:55Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/29e4c4d7fb2bb7734a48f54e3003e4e49af5b1e1/RA_Main_Scripts/RA-Set%20selected%20items%20nearest%20edges%20to%201%20frame%20distance%20from%20edit%20cursor.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Set Selection of all group items to OFF.lua" type="script" desc="Set linked selection of all group items to OFF">
