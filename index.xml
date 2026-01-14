@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="45ad393adcd013a046005ad52aa40640de2d62fb">
+<index version="1" name="RA-Scripts" commit="58430e5ff124e03eaec216a4d1fce24bd13dcae5">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -230,6 +230,9 @@
     <reapack name="RA-Keep_selected_items_that_cross_source_end.lua" type="script" desc="KEEP SELECTED ITEMS of clips that cross source end.">
       <version name="1.1" time="2026-01-14T16:55:13Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/45ad393adcd013a046005ad52aa40640de2d62fb/RA_Main_Scripts/RA-Keep_selected_items_that_cross_source_end.lua</source>
+      </version>
+      <version name="1.2" author="RESERVOIR AUDIO / MrBrock with AI" time="2026-01-14T17:21:20Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/58430e5ff124e03eaec216a4d1fce24bd13dcae5/RA_Main_Scripts/RA-Keep_selected_items_that_cross_source_end.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Log_original_take_name_to_selected_item_notes(AAF).lua" type="script" desc="Log original take name to selected item notes (AAF))">
