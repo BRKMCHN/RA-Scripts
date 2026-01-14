@@ -1,5 +1,6 @@
--- @version 1.1
+-- @version 1.2
 -- @description KEEP SELECTED ITEMS of clips that cross source end.
+-- @author RESERVOIR AUDIO / MrBrock with AI
 
 --[[
   Keep selected items that cross (wrap past) the end of their audio source.
