@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="58430e5ff124e03eaec216a4d1fce24bd13dcae5">
+<index version="1" name="RA-Scripts" commit="015d3ab900e918a8a9e84eac33625b1fc463591a">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -129,6 +129,16 @@
       </metadata>
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T18:49:19Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/3497403fa0c09d81b849fdd7a0921aacb93c493f/RA_Main_Scripts/RA-Duplicate_Previous_Take_Markers.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-DX_Normalize selected item lenght to most common within each group.lua" type="script" desc="Normalize selected item lenght to most common within each group. (For resetting DX blocs)">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-02-06T21:44:37Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/015d3ab900e918a8a9e84eac33625b1fc463591a/RA_Main_Scripts/RA-DX_Normalize%20selected%20item%20lenght%20to%20most%20common%20within%20each%20group.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Explode Polywav channels to items &amp; group vertically.lua" type="script" desc="Explode Polywav channels to items &amp; group vertically.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-02-06T21:44:37Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/015d3ab900e918a8a9e84eac33625b1fc463591a/RA_Main_Scripts/RA-Explode%20Polywav%20channels%20to%20items%20&amp;%20group%20vertically.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Group selected items with same name.lua" type="script" desc="Group selected items with same name (1 group per unique item name)">
@@ -354,6 +364,11 @@
     <reapack name="RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua" type="script" desc="REPORT Project info to TXT file with parameter value">
       <version name="1.0" author="MrBrock Edit from Reapack script &quot;edgemeal_Save project plugin info to text file.lua&quot; &amp; AI" time="2025-02-12T20:00:33Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/dc936fe645bd78b5713e52258780c89b26dfd96e/RA_Main_Scripts/RA-REPORT_Project_info_to_TXT_file_with_parameter_value.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Rescale Take Start Offset Using FPS Ratio from user input.lua" type="script" desc="Rescale Take Start Offset Using an FPS Ratio">
+      <version name="1.0" author="RESERVOIR AUDIO / Fante, with AI." time="2026-02-06T21:44:37Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/015d3ab900e918a8a9e84eac33625b1fc463591a/RA_Main_Scripts/RA-Rescale%20Take%20Start%20Offset%20Using%20FPS%20Ratio%20from%20user%20input.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Restore a copy &amp; replace source to original (RA_OFP tag).lua" type="script" desc="Restore a copy &amp; replace source to original (RA_OFP tag)">
