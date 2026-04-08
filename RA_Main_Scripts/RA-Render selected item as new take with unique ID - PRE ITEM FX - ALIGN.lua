@@ -1,7 +1,6 @@
 -- @description Render selected item as new take with unique ID - PRE ITEM FX - Set for RA auto align
--- @version 1.3
--- @author
---   RESERVOIR AUDIO / MrBrock with AI
+-- @version 1.4
+-- @author RESERVOIR AUDIO / MrBrock with AI
 
 -- Will duplicate active take of selected items. Will render PRE FX via accessor and replace the duplicated take's source with new item (name appended with unique ID). 
 -- Will sanitize take parameters which get rendered like start offset, playrate & pitch. Will add the original source's filename to item notes to avoid duplicating the tag later on.
@@ -96,6 +95,19 @@ local function unique_path(dir, base_stem, ext)
   end
 end
 
+local function get_project_media_dir()
+  local _, projfn = reaper.EnumProjects(-1, "")
+  projfn = projfn or ""
+
+  local media_path = reaper.GetProjectPathEx(0, "", 512)
+
+  if media_path and media_path ~= "" then
+    return media_path
+  end
+
+  return projfn:match("^(.*)[/\\][^/\\]+$") or ""
+end
+
 ---------------------------------------
 -- RA_OFN (Original File Name) in Item Notes
 ---------------------------------------
@@ -135,12 +147,24 @@ end
 
 -- Build output path using RA_OFN (if present), else the current source stem
 local function build_outpath_with_ra_ofn(item, src_path)
-  local dir, stem, _ = split_path(src_path)
+  local src_dir, stem, _ = split_path(src_path)
   if stem == "" then stem = "take" end
-  -- decide base stem
+
+  local out_dir = get_project_media_dir()
+  if out_dir == "" then
+    out_dir = src_dir
+  end
+
   local base_stem = ensure_or_get_ra_ofn(item, stem)
-  local base = string.format("%s_%s_%s%s", base_stem, get_volume_name(src_path), get_timestamp_HHMMSS(), TAG_SUFFIX)
-  return unique_path(dir, base, "wav")
+  local base = string.format(
+    "%s_%s_%s%s",
+    base_stem,
+    get_volume_name(src_path),
+    get_timestamp_HHMMSS(),
+    TAG_SUFFIX
+  )
+
+  return unique_path(out_dir, base, "wav")
 end
 
 -- 32-bit float WAV header (LE, WAVEFORMAT_IEEE_FLOAT)

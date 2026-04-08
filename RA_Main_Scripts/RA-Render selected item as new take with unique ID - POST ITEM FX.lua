@@ -1,7 +1,6 @@
 -- @description RA-Render selected item as new take with unique ID - POST ITEM FX
--- @version 1.3
--- @author
---   RESERVOIR AUDIO / MrBrock & AI
+-- @version 1.4
+-- @author RESERVOIR AUDIO / MrBrock & AI
 
 -- While UI is suspended, will create a temporary track. Will render a copy of each selected item preserving take FX via accessor (name appended with unique ID). 
 -- Will sanitize take parameters which get rendered like start offset, playrate & pitch. Will add the original source's filename to item notes to avoid duplicating the tag later on.
@@ -55,6 +54,20 @@ local function write_wav_header32(fh, sr, ch, data_bytes)
   fh:write("data"); w32(data_bytes)
 end
 
+-- Get project source directory
+local function get_project_media_dir()
+  local _, projfn = reaper.EnumProjects(-1, "")
+  projfn = projfn or ""
+
+  local media_path = reaper.GetProjectPathEx(0, "", 512)
+
+  if media_path and media_path ~= "" then
+    return media_path
+  end
+
+  return projfn:match("^(.*)[/\\][^/\\]+$") or ""
+end
+
 ---------------------------------------
 -- RA_OFN in Item Notes
 ---------------------------------------
@@ -69,11 +82,25 @@ local function ensure_or_get_ra_ofn(it, stem)
   set_notes(it, (notes or "") .. prefix .. "RA_OFN: " .. (stem or "take"))
   return stem
 end
+
 local function build_outpath_with_ra_ofn(item, src_path)
-  local dir, stem = split_path(src_path)
-  if stem=="" then stem="take" end
-  local base = string.format("%s_%s_%s%s", ensure_or_get_ra_ofn(item, stem), get_volume_name(src_path), ts(), TAG_SUFFIX)
-  return unique_path(dir, base, "wav")
+  local src_dir, stem = split_path(src_path)
+  if stem == "" then stem = "take" end
+
+  local out_dir = get_project_media_dir()
+  if out_dir == "" then
+    out_dir = src_dir -- fallback safety
+  end
+
+  local base = string.format(
+    "%s_%s_%s%s",
+    ensure_or_get_ra_ofn(item, stem),
+    get_volume_name(src_path),
+    ts(),
+    TAG_SUFFIX
+  )
+
+  return unique_path(out_dir, base, "wav")
 end
 
 ---------------------------------------
