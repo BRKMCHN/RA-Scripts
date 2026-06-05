@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="82cffa184a3453dfad3f4c25da1857f49a1ee654">
+<index version="1" name="RA-Scripts" commit="b4ec851919b8b51364a095f78debd4b925ddf145">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -169,6 +169,9 @@
     <reapack name="RA-HEAL contiguous ITEMS with tolerance of 1 frame.lua" type="script" desc="HEAL contiguous items (with a tolerance of 1 frame)">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2025-07-24T15:13:29Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/c0f55d84e22f1dd45ff136e01783416adfa04c0d/RA_Main_Scripts/RA-HEAL%20contiguous%20ITEMS%20with%20tolerance%20of%201%20frame.lua</source>
+      </version>
+      <version name="1.1" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-06-05T15:39:35Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/b4ec851919b8b51364a095f78debd4b925ddf145/RA_Main_Scripts/RA-HEAL%20contiguous%20ITEMS%20with%20tolerance%20of%201%20frame.lua</source>
       </version>
     </reapack>
     <reapack name="RA-ITEM_EDGES_EXTEND.lua" type="script" desc="Extend selected ITEM EDGES.">
