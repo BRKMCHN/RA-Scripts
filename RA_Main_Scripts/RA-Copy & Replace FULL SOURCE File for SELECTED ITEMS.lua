@@ -1,4 +1,4 @@
--- @version 3.1
+-- @version 3.2
 -- @description Copy & Replace FULL SOURCE File for SELECTED ITEMS
 -- @author RESERVOIR AUDIO / MrBrock & AI
 
@@ -179,12 +179,12 @@ local function tag_take_name_with_arrow(take)
     local _, name = reaper.GetSetMediaItemTakeInfo_String(take, "P_NAME", "", false)
     if not name then name = "" end
 
-    if not name:find("🔽", 1, true) then
+    if not name:find("◆", 1, true) then
         local new_name
         if name == "" then
-            new_name = "🔽"
+            new_name = "◆"
         else
-            new_name = name .. " 🔽"
+            new_name = name .. " ◆"
         end
         reaper.GetSetMediaItemTakeInfo_String(take, "P_NAME", new_name, true)
     end
@@ -288,7 +288,7 @@ local function main()
     end
 
     reaper.PreventUIRefresh(-1)
-    reaper.Undo_EndBlock("Copy Source, Replace Takes, Tag RA_OFP and 🔽", -1)
+    reaper.Undo_EndBlock("Copy Source, Replace Takes, Tag RA_OFP and ◆", -1)
     reaper.UpdateArrange()
     reaper.Main_OnCommand(40441, 0)
 end
