@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="8184a815246556668c24610490ebc5712a3ac7e2">
+<index version="1" name="RA-Scripts" commit="b79a1aba6b049518e34d7b5af05f0f9382fbbd64">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -527,6 +527,9 @@
     <reapack name="RA-Toggle Item Snap Mode.lua" type="script" desc="Toggle Item Snap Mode">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock + AI" time="2026-06-30T18:08:35Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/8184a815246556668c24610490ebc5712a3ac7e2/RA_Main_Scripts/RA-Toggle%20Item%20Snap%20Mode.lua</source>
+      </version>
+      <version name="1.1" author="RESERVOIR AUDIO / MrBrock + AI" time="2026-06-30T18:21:04Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/b79a1aba6b049518e34d7b5af05f0f9382fbbd64/RA_Main_Scripts/RA-Toggle%20Item%20Snap%20Mode.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Unselect_Muted_Items.lua" type="script" desc="UNSELECT MUTED ITEMS among currently selected items.">
