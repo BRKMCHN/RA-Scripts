@@ -1,4 +1,4 @@
--- @version 1.0
+-- @version 1.1
 -- @description Toggle Item Snap Mode
 -- @author RESERVOIR AUDIO / MrBrock + AI
 
@@ -59,6 +59,14 @@ else
 end
 
 reaper.SNM_SetIntConfigVar(VAR_NAME, new_value)
+
+local _, _, section_id, command_id = reaper.get_action_context()
+
+-- Button lit when mode is "both start/end"
+local toggle_state = currently_both and 0 or 1
+
+reaper.SetToggleCommandState(section_id, command_id, toggle_state)
+reaper.RefreshToolbar2(section_id, command_id)
 
 reaper.UpdateTimeline()
 reaper.UpdateArrange()
