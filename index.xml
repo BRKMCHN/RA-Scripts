@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="b79a1aba6b049518e34d7b5af05f0f9382fbbd64">
+<index version="1" name="RA-Scripts" commit="f2ea1797502390999add8fed90de673c89cc6808">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -483,6 +483,11 @@
     <reapack name="RA-Shorten EDGES of TIME SELECTION by USER DEFINED time.lua" type="script" desc="Shorten edges of time selection by user-defined time">
       <version name="1.1" author="RESERVOIR AUDIO" time="2025-03-14T18:50:20Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/bb48d84646c6cf907246d524e646c1b007e9e4dc/RA_Main_Scripts/RA-Shorten%20EDGES%20of%20TIME%20SELECTION%20by%20USER%20DEFINED%20time.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Snap Region Boundaries to Nearest Grid Position.lua" type="script" desc="Snap Region Boundaries to nearest grid position (Ignoring Zoom)">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-08-31T18:37:25Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/f2ea1797502390999add8fed90de673c89cc6808/RA_Main_Scripts/RA-Snap%20Region%20Boundaries%20to%20Nearest%20Grid%20Position.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Snap_Selected_Items_Edges_to_Nearest_Grid_Position.lua" type="script" desc="Snap selected item's edges to nearest grid position.">
