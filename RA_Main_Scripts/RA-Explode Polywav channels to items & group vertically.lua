@@ -1,4 +1,4 @@
--- @version 1.0
+-- @version 1.1
 -- @description Explode Polywav channels to items & group vertically.
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
 
@@ -77,9 +77,30 @@ end
 local function duplicate_item_to_track_from_chunk(srcItem, destTrack, chunk)
   local newItem = reaper.AddMediaItemToTrack(destTrack)
   if not newItem then return nil end
-  reaper.SetItemStateChunk(newItem, chunk, false)
+
+  if not reaper.SetItemStateChunk(newItem, chunk, false) then
+    reaper.DeleteTrackMediaItem(destTrack, newItem)
+    return nil
+  end
+
+  -- Assign a unique GUID to the duplicated item
+  reaper.GetSetMediaItemInfo_String(
+    newItem, "GUID", reaper.genGuid(), true
+  )
+
+  -- Assign unique GUIDs to all duplicated takes
+  for i = 0, reaper.CountTakes(newItem) - 1 do
+    local take = reaper.GetTake(newItem, i)
+    if take then
+      reaper.GetSetMediaItemTakeInfo_String(
+        take, "GUID", reaper.genGuid(), true
+      )
+    end
+  end
+
   return newItem
 end
+
 
 ----------------------------------------------------------------
 -- Main
