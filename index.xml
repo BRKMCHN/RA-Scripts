@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="f2ea1797502390999add8fed90de673c89cc6808">
+<index version="1" name="RA-Scripts" commit="648ff72466be623372790c26fdc3484f88e4fd1d">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -145,6 +145,9 @@
     <reapack name="RA-Explode Polywav channels to items &amp; group vertically.lua" type="script" desc="Explode Polywav channels to items &amp; group vertically.">
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-02-06T21:44:37Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/015d3ab900e918a8a9e84eac33625b1fc463591a/RA_Main_Scripts/RA-Explode%20Polywav%20channels%20to%20items%20&amp;%20group%20vertically.lua</source>
+      </version>
+      <version name="1.1" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-11-03T16:35:08Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/648ff72466be623372790c26fdc3484f88e4fd1d/RA_Main_Scripts/RA-Explode%20Polywav%20channels%20to%20items%20&amp;%20group%20vertically.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Group selected items with same name.lua" type="script" desc="Group selected items with same name (1 group per unique item name)">
@@ -294,6 +297,11 @@
       </version>
       <version name="1.2" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-02-27T15:45:10Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/d1ed4194fe2fb0d2290f771eaf796b55c11085d6/RA_Main_Scripts/RA-Move%20selected%20items%20to%20first%20selected%20track%20within%20overlap%20threshold.lua</source>
+      </version>
+    </reapack>
+    <reapack name="RA-Move selected items to first selected track.lua" type="script" desc="Move selected items to first selected track">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI" time="2026-11-03T16:35:08Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/648ff72466be623372790c26fdc3484f88e4fd1d/RA_Main_Scripts/RA-Move%20selected%20items%20to%20first%20selected%20track.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Open item copies in external editor (UNIQUE ID - PRE ITEM FX &amp; DEFER).lua" type="script" desc="RA-Open item copies in external editor (UNIQUE ID - PRE ITEM FX &amp; DEFER)">
