@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="5da320ba9a76a6f7e424f75dfd2c13748b82ed8b">
+<index version="1" name="RA-Scripts" commit="3f11dc3745e67f57e6630fb43389ccb58313b888">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -323,6 +323,9 @@
     <reapack name="RA-Reconform grouped identical item pairs with razor areas (excluding selected tracks).lua" type="script" desc="Reconform grouped identical item pairs with razor areas">
       <version name="1.0" author="RESERVOIR AUDIO / Fante &amp; MrBrock, adapted with AI." time="2025-06-10T16:48:19Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/1aef3ae433354ccd37c2748adc62d483d1c69e17/RA_Main_Scripts/RA-Reconform%20grouped%20identical%20item%20pairs%20with%20razor%20areas%20(excluding%20selected%20tracks).lua</source>
+      </version>
+      <version name="1.1" author="RESERVOIR AUDIO / Fante &amp; MrBrock, adapted with AI." time="2026-11-06T19:14:57Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/3f11dc3745e67f57e6630fb43389ccb58313b888/RA_Main_Scripts/RA-Reconform%20grouped%20identical%20item%20pairs%20with%20razor%20areas%20(excluding%20selected%20tracks).lua</source>
       </version>
     </reapack>
     <reapack name="RA-Reduce_Take_Gain_by_a_Quarter.lua" type="script" desc="REDUCE numerical VALUE of TAKE GAIN 25%. (Partial Un-normalization)">
