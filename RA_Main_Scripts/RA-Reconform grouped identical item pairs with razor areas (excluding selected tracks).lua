@@ -1,4 +1,4 @@
--- @version 1.0
+-- @version 1.1
 -- @description Reconform grouped identical item pairs with razor areas
 -- @author RESERVOIR AUDIO / Fante & MrBrock, adapted with AI.
 
@@ -8,7 +8,7 @@ SWS Extension Required
 Step 1: duplicate a track with desired items on them.
 Step 2: group all these items vertically
 Step 3: Move duplicated items found on "bottom" track intependently from group OR use preferred position action (with bwf offset works well too!)
-Step 4: Select tracks to exclude from razor area operation. (Original item's track - top track - will always be excluded)
+Step 4: Select tracks to exclude from razor area operation. (Original item's track - top track - will always be excluded - The same goes for hidden tracks)
 Step 5: Select at least one item of all grouped pairs and run the script
 
 *** It is worth noting that razor edit options will have impact on what is reconformed. 
@@ -46,11 +46,18 @@ if earliest_track then
   reaper.SetTrackSelected(earliest_track, true)
 end
 
--- Step 1: Save initially selected tracks to exclude from razor/paste
+-- Step 1: Save selected AND hidden tracks to exclude from razor/paste
 local excluded_tracks = {}
-for i = 0, reaper.CountSelectedTracks(0) - 1 do
-  local tr = reaper.GetSelectedTrack(0, i)
-  excluded_tracks[tr] = true
+
+for i = 0, reaper.CountTracks(0) - 1 do
+  local tr = reaper.GetTrack(0, i)
+
+  local selected = reaper.IsTrackSelected(tr)
+  local visible = reaper.GetMediaTrackInfo_Value(tr, "B_SHOWINTCP")
+
+  if selected or visible == 0 then
+    excluded_tracks[tr] = true
+  end
 end
 
 -- Step 2: Gather and group selected media items
