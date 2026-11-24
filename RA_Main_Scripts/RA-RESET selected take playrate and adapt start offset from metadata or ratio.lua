@@ -1,21 +1,27 @@
--- @version 1.0
--- @description RESET selected take playrate and adapt start offset from metadata or ratio
+-- @version 1.1
+-- @description RESET selected take playrate and adapt start offset (CID or ratio)
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
-
 
 --[[
   RA - Reset Take Rate and Restore Start Offset
 
-  For selected media items:
-  1. Reset active take playback rate to 1.0
-  2. Restore source offset from fetched CID value found in item notes (from vordio)
-  3. Otherwise calculate start offset / original playrate rate
+  Selected media items, active takes only.
+
+  Mode 1: CID metadata
+    Reset playrate to 1.0
+    Set start offset from second CID value from project notes
+    Skip items without valid CID
+
+  Mode 2: Rate calculation
+    Reset playrate to 1.0
+    Set start offset = original offset / original rate
 
   CID format example:
   CID:508.88337500|0.41708333|3.50350000|source.wav
 ]]
 
 local proj = 0
+local DEBUG = false
 
 local function get_cid_offset(item)
     local _, notes = reaper.GetSetMediaItemInfo_String(
@@ -26,7 +32,6 @@ local function get_cid_offset(item)
         return nil
     end
 
-    -- Find the second pipe-separated CID value
     for line in notes:gmatch("[^\r\n]+") do
         local value = line:match(
             "^%s*CID:%s*[^|]*|%s*([^|]+)"
@@ -46,13 +51,31 @@ end
 
 local function main()
     local count = reaper.CountSelectedMediaItems(proj)
+    if count == 0 then return end
 
-    if count == 0 then
+    -- Choose repair method
+    local retval, input = reaper.GetUserInputs(
+        "Start Offset Repair",
+        1,
+        "1 = Item CID  /  2 = Rate Quotient",
+        "1"
+    )
+
+    if not retval then return end
+
+    local mode = input:match("^%s*(.-)%s*$")
+
+    if mode ~= "1" and mode ~= "2" then
+        reaper.MB(
+            "Please enter 1 (CID) or 2 (Rate calculation).",
+            "Invalid repair method",
+            0
+        )
         return
     end
 
     local cid_count = 0
-    local fallback_count = 0
+    local ratio_count = 0
     local skipped_count = 0
 
     reaper.Undo_BeginBlock()
@@ -72,24 +95,32 @@ local function main()
             )
 
             if rate > 0 then
-                local cid_offset = get_cid_offset(item)
                 local new_offset
 
-                if cid_offset then
-                    new_offset = cid_offset
-                    cid_count = cid_count + 1
+                if mode == "1" then
+                    new_offset = get_cid_offset(item)
+
+                    if new_offset then
+                        cid_count = cid_count + 1
+                    end
                 else
                     new_offset = offset / rate
-                    fallback_count = fallback_count + 1
+                    ratio_count = ratio_count + 1
                 end
 
-                reaper.SetMediaItemTakeInfo_Value(
-                    take, "D_PLAYRATE", 1.0
-                )
+                if new_offset then
+                    reaper.SetMediaItemTakeInfo_Value(
+                        take, "D_PLAYRATE", 1.0
+                    )
 
-                reaper.SetMediaItemTakeInfo_Value(
-                    take, "D_STARTOFFS", new_offset
-                )
+                    reaper.SetMediaItemTakeInfo_Value(
+                        take, "D_STARTOFFS", new_offset
+                    )
+
+                    reaper.UpdateItemInProject(item)
+                else
+                    skipped_count = skipped_count + 1
+                end
             else
                 skipped_count = skipped_count + 1
             end
@@ -102,18 +133,20 @@ local function main()
     reaper.UpdateArrange()
 
     reaper.Undo_EndBlock(
-        "Reset take rate and restore CID start offset", -1
+        "Reset take rate and repair offset (" ..
+        (mode == "1" and "CID" or "Rate calculation") ..
+        ")",
+        -1
     )
-
-    -- Optional console report
-    local DEBUG = false
 
     if DEBUG then
         reaper.ShowConsoleMsg(
             string.format(
-                "CID restored: %d\nFallback: %d\nSkipped: %d\n",
+                "CID repaired: %d\n" ..
+                "Rate repaired: %d\n" ..
+                "Skipped: %d\n",
                 cid_count,
-                fallback_count,
+                ratio_count,
                 skipped_count
             )
         )
@@ -121,4 +154,3 @@ local function main()
 end
 
 main()
-
