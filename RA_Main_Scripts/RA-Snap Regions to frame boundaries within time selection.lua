@@ -1,6 +1,7 @@
 -- @version 1.0
--- @description Snap Region Boundaries to nearest grid position (Ignoring Zoom)
+-- @description Snap Regions to frame boundaries within time selection.
 -- @author RESERVOIR AUDIO / MrBrock, with AI.
+
 
 function snap_regions_in_time_selection_to_frames()
 
