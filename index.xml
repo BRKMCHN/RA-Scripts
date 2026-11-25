@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="RA-Scripts" commit="d913846480a786eda334b04a088427723f0d09d6">
+<index version="1" name="RA-Scripts" commit="e7b156086bd44c6d5d828569d8812b047a733edd">
   <category name="RA_Main_Scripts">
     <reapack name="RA- MOVE Selected item Chunk to selected TRACK per GROUP.lua" type="script" desc="Move item chunks to selected track maintaining group proportions">
       <version name="1.0" author="Reservoir Audio / Mr.Brock with AI" time="2024-05-06T22:53:44Z">
@@ -135,11 +135,6 @@
       </metadata>
       <version name="1.0" author="RESERVOIR AUDIO / MrBrock adapted with AI." time="2024-06-26T18:49:19Z">
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/3497403fa0c09d81b849fdd7a0921aacb93c493f/RA_Main_Scripts/RA-Duplicate_Previous_Take_Markers.lua</source>
-      </version>
-    </reapack>
-    <reapack name="RA-DX_Normalize selected item lenght to most common within each group.lua" type="script" desc="Normalize selected item lenght to most common within each group. (For resetting DX blocs)">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-02-06T21:44:37Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/015d3ab900e918a8a9e84eac33625b1fc463591a/RA_Main_Scripts/RA-DX_Normalize%20selected%20item%20lenght%20to%20most%20common%20within%20each%20group.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Explode Polywav channels to items &amp; group vertically.lua" type="script" desc="Explode Polywav channels to items &amp; group vertically.">
@@ -504,9 +499,9 @@
         <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/bb48d84646c6cf907246d524e646c1b007e9e4dc/RA_Main_Scripts/RA-Shorten%20EDGES%20of%20TIME%20SELECTION%20by%20USER%20DEFINED%20time.lua</source>
       </version>
     </reapack>
-    <reapack name="RA-Snap Region Boundaries to Nearest Grid Position.lua" type="script" desc="Snap Region Boundaries to nearest grid position (Ignoring Zoom)">
-      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-08-31T18:37:25Z">
-        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/f2ea1797502390999add8fed90de673c89cc6808/RA_Main_Scripts/RA-Snap%20Region%20Boundaries%20to%20Nearest%20Grid%20Position.lua</source>
+    <reapack name="RA-Snap Regions to frame boundaries within time selection.lua" type="script" desc="Snap Regions to frame boundaries within time selection.">
+      <version name="1.0" author="RESERVOIR AUDIO / MrBrock, with AI." time="2026-11-25T22:17:12Z">
+        <source main="main">https://github.com/BRKMCHN/RA-Scripts/raw/e7b156086bd44c6d5d828569d8812b047a733edd/RA_Main_Scripts/RA-Snap%20Regions%20to%20frame%20boundaries%20within%20time%20selection.lua</source>
       </version>
     </reapack>
     <reapack name="RA-Snap_Selected_Items_Edges_to_Nearest_Grid_Position.lua" type="script" desc="Snap selected item's edges to nearest grid position.">
